@@ -1,6 +1,6 @@
 // Wygenerowane przy budowaniu (vite.config.ts) – nie edytuj ręcznie.
-const CACHE = "indeks-0.6.2-cf286d88";
-const ASSETS = ["./index.html","./assets/index-DGbMktzp.js","./assets/ai-xQU_rX4o.js","./assets/error-BTdmRKoB.js","./assets/firebase-DAyI1Y6i.js","./assets/node.browser-C9JJihnx.js","./assets/node.browser-HQ5SKBOf.js","./assets/index-Ca6IXySg.css","./assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2","./assets/inter-cyrillic-wght-normal-DqGufNeO.woff2","./assets/inter-greek-ext-wght-normal-DlzME5K_.woff2","./assets/inter-greek-wght-normal-CkhJZR-_.woff2","./assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2","./assets/inter-latin-wght-normal-Dx4kXJAl.woff2","./assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2","./apple-touch-icon.png","./favicon.svg","./icon-192.png","./icon-512.png","./manifest.webmanifest"];
+const CACHE = "indeks-0.7.0-d9666800";
+const ASSETS = ["./index.html","./assets/index-91kcwqUE.js","./assets/ai-CwRfn2HI.js","./assets/error-BTdmRKoB.js","./assets/firebase-DctGCmof.js","./assets/node.browser-CVogbJvd.js","./assets/node.browser-HQ5SKBOf.js","./assets/bricolage-grotesque-latin-ext-opsz-normal-IcJDqblK.woff2","./assets/bricolage-grotesque-latin-opsz-normal-Cre6nC2_.woff2","./assets/bricolage-grotesque-vietnamese-opsz-normal-D9N6E8K1.woff2","./assets/index-L9NIPwx6.css","./apple-touch-icon.png","./favicon.svg","./icon-192.png","./icon-512.png","./icon-maskable-512.png","./manifest.webmanifest"];
 const INDEX = new URL("./index.html", self.registration.scope).href;
 let repairing = false;
 

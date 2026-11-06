@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7c5cff"/>
-      <stop offset="1" stop-color="#4fa8ff"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="20" fill="url(#g)"/>
-  <g transform="translate(14 14) scale(1.5)">
-    <path d="M6 3.5h9.5L19 7v13.5H6z" fill="#fff" fill-opacity=".22"/>
-    <path d="M6 3.5h9.5L19 7v13.5H6z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
-    <path d="M9 13l2.2 2.2L15.5 10.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><rect width="1024" height="1024" rx="228" fill="#2340E8"/><rect x="156" y="404" width="216" height="216" rx="44" fill="#FFFFFF" fill-opacity="0.13"/><rect x="652" y="404" width="216" height="216" rx="44" fill="#FFFFFF" fill-opacity="0.13"/><rect x="156" y="156" width="216" height="216" rx="44" fill="#FFFFFF"/><rect x="404" y="156" width="216" height="216" rx="44" fill="#FFFFFF"/><rect x="652" y="156" width="216" height="216" rx="44" fill="#FFFFFF"/><rect x="156" y="652" width="216" height="216" rx="44" fill="#FFFFFF"/><rect x="404" y="652" width="216" height="216" rx="44" fill="#FFFFFF"/><rect x="652" y="652" width="216" height="216" rx="44" fill="#FFFFFF"/><rect x="404" y="404" width="216" height="216" rx="44" fill="#FFB627"/></svg>
