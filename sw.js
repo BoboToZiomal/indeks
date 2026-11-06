@@ -1,6 +1,6 @@
 // Wygenerowane przy budowaniu (vite.config.ts) – nie edytuj ręcznie.
-const CACHE = "indeks-0.6.0-b3cbc071";
-const ASSETS = ["./index.html","./assets/index-CkJGEGoj.js","./assets/ai-C_B0-PDc.js","./assets/error-BTdmRKoB.js","./assets/firebase-DLif6MOJ.js","./assets/node.browser-DEgcARNs.js","./assets/node.browser-HQ5SKBOf.js","./assets/index-Ca6IXySg.css","./assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2","./assets/inter-cyrillic-wght-normal-DqGufNeO.woff2","./assets/inter-greek-ext-wght-normal-DlzME5K_.woff2","./assets/inter-greek-wght-normal-CkhJZR-_.woff2","./assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2","./assets/inter-latin-wght-normal-Dx4kXJAl.woff2","./assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2","./apple-touch-icon.png","./favicon.svg","./icon-192.png","./icon-512.png","./manifest.webmanifest"];
+const CACHE = "indeks-0.6.1-b3d111e5";
+const ASSETS = ["./index.html","./assets/index-btDWVbn5.js","./assets/ai-EwaopHRR.js","./assets/error-BTdmRKoB.js","./assets/firebase-B2K6-o9P.js","./assets/node.browser-Dbx0fZ8h.js","./assets/node.browser-HQ5SKBOf.js","./assets/index-Ca6IXySg.css","./assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2","./assets/inter-cyrillic-wght-normal-DqGufNeO.woff2","./assets/inter-greek-ext-wght-normal-DlzME5K_.woff2","./assets/inter-greek-wght-normal-CkhJZR-_.woff2","./assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2","./assets/inter-latin-wght-normal-Dx4kXJAl.woff2","./assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2","./apple-touch-icon.png","./favicon.svg","./icon-192.png","./icon-512.png","./manifest.webmanifest"];
 const INDEX = new URL("./index.html", self.registration.scope).href;
 let repairing = false;
 
