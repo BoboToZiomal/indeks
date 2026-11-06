@@ -1,0 +1,36 @@
+# Co kilka godzin pobiera ogłoszenia wydziałów i zapisuje je w data/announcements.json.
+# Aplikacja czyta ten plik, więc po zmianie nie trzeba wydawać nowej wersji.
+name: Ogłoszenia wydziałów
+
+on:
+  schedule:
+    - cron: "23 5-20/3 * * *" # czas UTC, 6 razy dziennie
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Pobierz ogłoszenia
+        run: node scripts/scrape-announcements.mjs
+      - name: Zapisz zmiany
+        # always(): gdy jeden wydział nie odpowiada, dane drugiego i tak mają trafić do pliku.
+        if: always()
+        run: |
+          git add data/announcements.json
+          if git diff --cached --quiet; then
+            echo "Bez zmian."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Ogłoszenia: aktualizacja"
+          git push
