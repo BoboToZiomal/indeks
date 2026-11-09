@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T14:00:36.188Z",
+  "updatedAt": "2026-11-09T23:28:21.120Z",
   "items": [
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
@@ -13,6 +13,30 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "default-3bf945bde0e4667d52b75153b95e066b",
+      "title": "Szkolenie: Zasoby i funkcjonalności Banku Danych Lokalnych GUS - środa 18.11.2026",
+      "excerpt": "Wydziałowe Centrum Szkoleń i Praktyk Zawodowych zaprasza do udziału w szkoleniu. Tytuł szkolenia: Zasoby i funkcjonalności Banku Danych Lokalnych GUS (BDL) - Urząd Statystyczny w Łodzi Miejsce…",
+      "date": "2026-11-09",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/default-3bf945bde0e4667d52b75153b95e066b",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-09T23:28:21.104Z"
+    },
+    {
+      "id": "default-62e58940b345b027e702cdc46607319b",
+      "title": "Szkolenie: SMUP – System Monitorowania Usług Publicznych - czwartek 19.11.2026",
+      "excerpt": "Wydziałowe Centrum Szkoleń i Praktyk Zawodowych zaprasza do udziału w szkoleniu. Tytuł szkolenia: SMUP – System Monitorowania Usług Publicznych Miejsce realizacji szkolenia: Wydział…",
+      "date": "2026-11-09",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/default-62e58940b345b027e702cdc46607319b",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-09T23:28:21.104Z"
     },
     {
       "id": "gospodarka-cyrkularna-wymiana-ubran-na-eksocu",
@@ -49,6 +73,18 @@
         "filolog"
       ],
       "firstSeen": "2026-11-09T14:00:36.152Z"
+    },
+    {
+      "id": "szkolenie-wstep-do-portalu-geostatystycznego-urzad-statystyczny-w-lodzi-piatek-20112026",
+      "title": "Szkolenie: Wstęp do Portalu Geostatystycznego Urząd Statystyczny w Łodzi - piątek 20.11.2026",
+      "excerpt": "Wydziałowe Centrum Szkoleń i Praktyk Zawodowych zaprasza do udziału w szkoleniu. Tytuł szkolenia: Wstęp do Portalu Geostatystycznego – narzędzia do przestrzennej wizualizacji danych…",
+      "date": "2026-11-09",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/szkolenie-wstep-do-portalu-geostatystycznego-urzad-statystyczny-w-lodzi-piatek-20112026",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-09T23:28:21.104Z"
     },
     {
       "id": "uczta-starozytny-traktat-o-milosci-zapraszamy-na-wyklad",
