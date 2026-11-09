@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06T09:06:41.444Z",
+  "updatedAt": "2026-11-09T14:00:36.188Z",
   "items": [
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
@@ -13,6 +13,66 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "gospodarka-cyrkularna-wymiana-ubran-na-eksocu",
+      "title": "Gospodarka cyrkularna - wymiana ubrań na EkSocu i gra terenowa",
+      "excerpt": "Czy wiecie, że to właśnie Wy możecie dać ubraniom drugie życie? Każdy z nas ma realny wpływ na rozwój gospodarki cyrkularnej! Zamiast kupować kolejne rzeczy pod wpływem impulsu, postawmy na obieg…",
+      "date": "2026-11-09",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/gospodarka-cyrkularna-wymiana-ubran-na-eksocu",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
+    },
+    {
+      "id": "innovation-hack-budujemybezpiecznejutro",
+      "title": "Innovation Hack: #BudujemyBezpieczneJutro - Cementownia Warta S.A. - dołącz do hackathonu",
+      "excerpt": "Cementownia Warta S.A. zaprasza studentów i doktorantów dowolnego kierunku na Innovation Hack: #BudujemyBezpieczneJutro – dwudniowy hackathon, podczas którego uczestnicy zmierzą się z rzeczywistymi…",
+      "date": "2026-11-09",
+      "category": "Uniwersytet",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/innovation-hack-budujemybezpiecznejutro",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
+    },
+    {
+      "id": "rusza-rekrutacja-na-oboz-narciarski-w-krynicy-zdroju-6-13-luty-2027",
+      "title": "Rusza rekrutacja na obóz narciarski w Krynicy-Zdroju, 6-13 luty 2027",
+      "excerpt": "Centrum Wsparcia i Dostępności UŁ zaprasza osoby studiujące w UŁ ze szczególnymi potrzebami, w tym z niepełnosprawnościami, do udziału w bezpłatnym obozie narciarskim.",
+      "date": "2026-11-09",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/rusza-rekrutacja-na-oboz-narciarski-w-krynicy-zdroju-6-13-luty-2027",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
+    },
+    {
+      "id": "uczta-starozytny-traktat-o-milosci-zapraszamy-na-wyklad",
+      "title": "„Uczta: starożytny traktat o miłości”. Zapraszamy na wykład",
+      "excerpt": "Zapraszamy na drugi, w tym roku akademickim, wykład z cyklu „Poszukiwania” o odbędzie się w 12 listopada (czwartek) o godz. 18:00 w sali 0.43 na Wydziale Filologicznym UŁ. Współorganizatorem cyklu są…",
+      "date": "2026-11-09",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/uczta-starozytny-traktat-o-milosci-zapraszamy-na-wyklad",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
+    },
+    {
+      "id": "gis-arena",
+      "title": "GIS Arena",
+      "excerpt": "Studenckie Koło Naukowe Geoinformacji UŁ PIKSEL oraz Studenckie Koło Naukowe Gospodarki Przestrzennej UŁ SPATIUM zapraszają na GIS Arenę - turniej organizowany z okazji GIS Day 2026. Wydarzenie…",
+      "date": "2026-11-06",
+      "category": "Wydział Nauk Geograficznych",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/gis-arena",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
     },
     {
       "id": "collabothon-2026-hackathon-organizowany-przez-commerzbank-digital-technology-centre-poland",
