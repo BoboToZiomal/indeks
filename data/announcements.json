@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T23:28:21.120Z",
+  "updatedAt": "2026-11-10T13:35:25.319Z",
   "items": [
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
@@ -13,6 +13,31 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
+      "title": "Kultura na UŁ? Nie wróżymy z fusów. Pytamy Was!",
+      "excerpt": "Koncerty, wystawy, warsztaty, kino, a może coś, na co jeszcze nikt nie wpadł? Co sprawia, że chcecie angażować się w życie kulturalne uczelni, a czego Wam w nim brakuje? Chcemy poznać Wasze zdanie!…",
+      "date": "2026-11-10",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "rusza-rekrutacja-na-oboz-narciarski-w-krynicy-zdroju-6-13-lutego-2027",
+      "title": "Rusza rekrutacja na obóz narciarski w Krynicy-Zdroju, 6-13 lutego 2027",
+      "excerpt": "Centrum Wsparcia i Dostępności UŁ zaprasza osoby studiujące w UŁ ze szczególnymi potrzebami, w tym z niepełnosprawnościami, do udziału w bezpłatnym obozie narciarskim.",
+      "date": "2026-11-10",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/rusza-rekrutacja-na-oboz-narciarski-w-krynicy-zdroju-6-13-lutego-2027",
+      "faculties": [
+        "eksoc",
+        "filolog"
+      ],
+      "firstSeen": "2026-11-10T13:35:25.306Z"
     },
     {
       "id": "default-3bf945bde0e4667d52b75153b95e066b",
@@ -167,18 +192,6 @@
       "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/twoja-przyszlosc-zaczyna-sie-dzis-poznaj-swiat-nowoczesnych-technologii-i-zaplanuj-kariere-z-nextgen-stem",
       "faculties": [
         "eksoc",
-        "filolog"
-      ],
-      "firstSeen": "2026-11-06T09:06:41.435Z"
-    },
-    {
-      "id": "kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
-      "title": "Kultura na UŁ? Nie wróżymy z fusów. Pytamy Was!",
-      "excerpt": "Koncerty, wystawy, warsztaty, kino, a może coś, na co jeszcze nikt nie wpadł? Co sprawia, że chcecie angażować się w życie kulturalne uczelni, a czego Wam w nim brakuje? Chcemy poznać Wasze zdanie!…",
-      "date": "2026-11-03",
-      "category": "Uniwersytet",
-      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
-      "faculties": [
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
