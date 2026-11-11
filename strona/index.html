@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="pl" data-type="software" data-radius="round" data-ground="sand" data-buttons="tonal" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indeks: plan zajęć, frekwencja i oceny dla studentów</title>
+<meta name="description" content="Aplikacja na Windows, telefon i przeglądarkę, która liczy limity nieobecności i średnią ważoną ECTS, a do tego szuka dni na dłuższe wolne.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bobotoziomal.github.io/indeks/strona/">
+<meta property="og:site_name" content="Indeks">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Indeks: plan zajęć, frekwencja i oceny dla studentów">
+<meta property="og:description" content="Liczy limity nieobecności i średnią ważoną ECTS, a do tego szuka dni na dłuższe wolne. Na Windows, telefon i przeglądarkę.">
+<meta property="og:image" content="https://bobotoziomal.github.io/indeks/strona/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f1f2f4">
+<link rel="canonical" href="https://bobotoziomal.github.io/indeks/strona/">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:wght@400..600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #f1f2f4; --p-surface: #e4e5e8; --p-ink: #14161c; --p-muted: #5e6065;
+  --p-accent: #2340e8; --p-accent-ink: #f1f2f4; --p-action: #2340e8; --p-action-ink: #f1f2f4;
+  --p-inv-bg: #14161c; --p-inv-surface: #202228; --p-inv-ink: #f1f2f4; --p-inv-muted: #94969a;
+  --p-inv-accent: #f1f2f4; --p-inv-accent-ink: #14161c; --p-inv-action: #f1f2f4; --p-inv-action-ink: #14161c;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --display-stretch: 96%;
+}
+</style>
+<link rel="stylesheet" href="assets/ui/base.css">
+<link rel="stylesheet" href="assets/diagrams/diagram.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/liquid-type/moment.js">
+<link rel="modulepreload" href="assets/moments/line-carries-colour/moment.js">
+<style>
+/* Page CSS: only inside the visuals (Indeks's own screens, drawn as live HTML with the app's tokens from
+   src/styles.css), one --p-h per card group, the phone, and the collage's container. */
+
+/* ---------------------------------------------------------------- the app's own UI */
+.ix {
+  --ix-bg: #f1f2f4; --ix-surface: #ffffff; --ix-surface-2: #ebedf1; --ix-surface-3: #dcdfe5;
+  --ix-border: #d3d6dd; --ix-border-strong: #a9aeba; --ix-hatch: #a9aeba;
+  --ix-text: #14161c; --ix-text-2: #4a4f5c; --ix-text-3: #626876;
+  --ix-success: #0e7a4e; --ix-warn: #a15c00; --ix-danger: #c4262e; --ix-info: #1d5fd1;
+  --ix-accent: #2340e8; --ix-accent-text: color-mix(in oklab, #2340e8 85%, black); --ix-accent-soft: color-mix(in oklab, #2340e8 12%, transparent);
+  --ix-on: #14161c;
+  --am: #f2706b; --po: #4f8dff; --aisd: #22c3d6; --bd: #2fc58b; --fiz: #f5b14a; --ang: #9bd25a;
+  --kol: #f59e0b; --zad: #3b82f6;
+  color: var(--ix-text); font-family: "Bricolage Grotesque", system-ui, sans-serif; font-optical-sizing: auto;
+  font-stretch: 100%; line-height: 1.35; letter-spacing: 0; text-align: left;
+}
+.ix--dark {
+  --ix-bg: #111318; --ix-surface: #1c1f27; --ix-surface-2: #262a33; --ix-surface-3: #323743;
+  --ix-border: #2d313b; --ix-border-strong: #454a58; --ix-hatch: #565c6b;
+  --ix-text: #f3f4f6; --ix-text-2: #b2b8c5; --ix-text-3: #8f96a6;
+  --ix-success: #4ade97; --ix-warn: #fbbf24; --ix-danger: #ff8a80;
+  --ix-accent-soft: color-mix(in oklab, #2340e8 24%, transparent);
+}
+.ix p { margin: 0; }
+.ix-i { width: 1em; height: 1em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ix-card { background: var(--ix-surface); border-radius: 1.15em; padding: 1em 1.1em; }
+.ix-h { display: flex; align-items: center; gap: .5em; font-weight: 700; font-size: 1.12em; letter-spacing: -0.015em; line-height: 1.2; }
+.ix-h .ix-i { color: var(--ix-text-3); }
+.ix-h2 { font-weight: 700; font-size: 1.45em; letter-spacing: -0.02em; line-height: 1.2; }
+.ix-sub { font-size: .86em; color: var(--ix-text-2); }
+.ix-faint { color: var(--ix-text-3); }
+.ix-head { display: flex; align-items: center; justify-content: space-between; gap: .75em; }
+.ix-link { font-size: .9em; font-weight: 600; color: var(--ix-text-2); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.ix-hello { font-size: .95em; font-weight: 500; color: var(--ix-text-2); }
+.ix-title { font-weight: 700; font-size: 1.7em; line-height: 1.06; letter-spacing: -0.03em; text-wrap: balance; }
+.ix-stack { display: grid; gap: .55em; }
+
+/* the day: solid course-coloured blocks with dark text, in both themes */
+.ix-block { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: .45em; min-height: var(--bh, 5.4em); padding: .8em 1.05em; border-radius: 1.2em; background: var(--c); color: var(--ix-on); }
+.ix-block__top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .1em .9em; font-size: 1.18em; font-weight: 650; line-height: 1.2; letter-spacing: -0.01em; }
+.ix-block__top > :first-child { min-width: 0; }
+.ix-block__top > :last-child { flex: none; }
+.ix-block__meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .25em .6em; font-size: .88em; }
+.ix-chip { display: inline-flex; align-items: center; padding: .2em .75em; border-radius: 999px; background: var(--ix-on); color: #ffffff; font-size: .86em; font-weight: 600; white-space: nowrap; }
+.ix-gap { display: flex; align-items: center; min-height: var(--gh, 3.3em); padding: 0 1.05em; border: 2px dashed var(--ix-hatch); border-radius: 1.2em; font-weight: 600; font-size: .95em; color: var(--ix-text-2); }
+.ix-status { position: absolute; top: .6em; right: .6em; display: grid; place-items: center; width: 1.55em; height: 1.55em; border-radius: .5em; background: var(--ix-on); color: #ffffff; }
+.ix-status .ix-i { width: .95em; height: .95em; stroke-width: 3; }
+.ix-block:has(.ix-status) .ix-block__top { padding-right: 1.9em; }
+
+/* the week in miniature */
+.ix-week { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .5em; }
+.ix-day { display: flex; flex-direction: column; gap: .4em; min-width: 0; }
+.ix-day__label { display: flex; align-items: center; gap: .35em; font-size: .9em; font-weight: 600; color: var(--ix-text-2); white-space: nowrap; overflow: hidden; }
+.ix-day.is-today .ix-day__label { color: var(--ix-text); font-weight: 700; }
+.ix-day__col { position: relative; height: var(--wh, 11em); padding: .45em; border-radius: .9em; background: var(--ix-surface); }
+.ix-day.is-today .ix-day__col { box-shadow: inset 0 0 0 2px var(--ix-text); }
+.ix-day.is-off .ix-day__col { display: grid; place-items: center; padding: .4em; background: transparent; border: 2px dashed var(--ix-hatch); text-align: center; font-size: max(11px, .78em); line-height: 1.25; color: var(--ix-text-2); }
+.ix-track { position: relative; height: 100%; }
+.ix-mb { position: absolute; left: 0; right: 0; top: var(--t); height: calc(var(--h) - 2px); display: flex; align-items: center; padding: 0 .45em; border-radius: .5em; background: var(--c); color: var(--ix-on); font-size: .74em; font-weight: 600; line-height: 1.1; overflow: hidden; white-space: nowrap; }
+.ix-mb > span { overflow: hidden; text-overflow: ellipsis; }
+.ix-note { font-weight: 500; }
+.ix-plan { font-size: max(11px, .78em); font-weight: 650; padding: .05em .5em; border-radius: 999px; color: var(--ix-accent-text); background: var(--ix-accent-soft); }
+
+/* badges, buttons, lists */
+.ix-badge { display: inline-flex; align-items: center; gap: .3em; padding: .15em .7em; border-radius: 999px; font-size: max(11px, .8em); font-weight: 650; white-space: nowrap; background: var(--ix-surface-2); color: var(--ix-text-2); }
+.ix-badge--ok { color: var(--ix-success); background: color-mix(in oklab, var(--ix-success) 14%, transparent); }
+.ix-badge--warn { color: var(--ix-warn); background: color-mix(in oklab, var(--ix-warn) 14%, transparent); }
+.ix-badge--bad { color: var(--ix-danger); background: color-mix(in oklab, var(--ix-danger) 14%, transparent); }
+.ix-badge--accent { color: var(--ix-accent-text); background: var(--ix-accent-soft); }
+.ix-dot { flex: none; width: .72em; height: .72em; border-radius: .26em; background: var(--c); }
+.ix-btn { display: inline-flex; align-items: center; justify-content: center; gap: .4em; height: 2.4em; padding: 0 1.05em; border-radius: 999px; border: 1.5px solid var(--ix-border-strong); font-size: .88em; font-weight: 600; white-space: nowrap; color: var(--ix-text); }
+.ix-btn--primary { background: var(--ix-text); border-color: var(--ix-text); color: var(--ix-bg); }
+.ix-btn--sm { height: 2.15em; padding: 0 .85em; font-size: .82em; }
+.ix-btn--icon { width: 2.3em; padding: 0; }
+.ix-list { display: grid; }
+.ix-list > * { display: flex; align-items: center; justify-content: space-between; gap: .75em; padding: .6em 0; border-top: 1px solid var(--ix-border); min-width: 0; }
+.ix-list .ix-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ix-term { display: grid !important; grid-template-columns: 3.7em minmax(0, 1fr); gap: .6em !important; align-items: start !important; }
+.ix-term > b { font-size: 1.04em; font-weight: 700; letter-spacing: -0.01em; }
+.ix-pips { display: inline-flex; align-items: center; gap: .25em; flex: none; }
+.ix-pip { width: 1em; height: 1em; border-radius: .32em; background: var(--c); }
+.ix-pip.is-used { background: transparent; box-shadow: inset 0 0 0 2px var(--ix-hatch); }
+.ix-left { min-width: 3.2em; margin-left: .35em; text-align: right; font-weight: 700; white-space: nowrap; }
+.ix-left.is-over { color: var(--ix-danger); }
+
+/* frekwencja */
+.ix-limits { display: grid; gap: .5em; }
+.ix-limit { display: grid; gap: .45em; padding: .75em .9em; border-radius: .95em; background: var(--ix-surface-2); }
+.ix-limit__top { display: flex; align-items: center; gap: .6em; min-width: 0; }
+.ix-limit__top > div { flex: 1; min-width: 0; }
+.ix-limit__name { font-weight: 650; }
+.ix-limit__meta { font-size: max(11px, .8em); color: var(--ix-text-2); }
+.ix-bar { height: .5em; border-radius: 99px; background: var(--ix-surface-3); overflow: hidden; }
+.ix-bar > i { display: block; width: var(--w); height: 100%; border-radius: inherit; background: var(--c); }
+.ix-counts { display: flex; justify-content: space-between; font-size: max(11px, .78em); color: var(--ix-text-2); }
+.ix-sugg { display: flex; flex-direction: column; gap: .7em; }
+.ix-sugg__title { font-size: 1.45em; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.ix-days { display: flex; gap: .3em; }
+.ix-days > span { flex: 1; min-width: 0; padding: .4em 0; border-radius: .55em; text-align: center; font-size: max(11px, .76em); font-weight: 650; line-height: 1.2; color: var(--ix-success); background: color-mix(in oklab, var(--ix-success) 15%, transparent); }
+.ix-days > span.is-skip { color: var(--ix-warn); background: color-mix(in oklab, var(--ix-warn) 15%, transparent); outline: 1px dashed color-mix(in oklab, var(--ix-warn) 60%, transparent); }
+.ix-crow { display: flex; align-items: center; gap: .55em; font-size: max(11px, .82em); color: var(--ix-text-2); min-width: 0; }
+.ix-crow > span:nth-child(2) { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ix-crow > span:last-child { flex: none; color: var(--ix-text-3); }
+.ix-crow .ix-dot { width: .6em; height: .6em; border-radius: 50%; }
+.ix-foot { display: flex; align-items: center; justify-content: space-between; gap: .6em; }
+.ix-mark { display: grid; gap: .5em; padding: .65em 0; border-top: 1px solid var(--ix-border); }
+.ix-mark__who { display: flex; align-items: center; gap: .6em; min-width: 0; }
+.ix-mark__who > div { min-width: 0; }
+.ix-mark__btns { display: flex; gap: .4em; }
+
+/* oceny */
+.ix-sim__row { display: grid; gap: .45em; padding: .5em 0; }
+.ix-sim__name { display: flex; align-items: center; gap: .55em; font-size: .9em; min-width: 0; }
+.ix-sim__name b { flex: 1; min-width: 0; font-weight: 650; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ix-grades { display: flex; flex-wrap: wrap; gap: .35em; }
+.ix-grades > span { display: inline-grid; place-items: center; min-width: 2.7em; height: 2.05em; padding: 0 .65em; border-radius: 99px; border: 1.5px solid var(--ix-border); font-size: .84em; font-weight: 600; color: var(--ix-text-2); }
+.ix-grades > span.is-on { background: var(--ix-text); border-color: var(--ix-text); color: var(--ix-bg); }
+.ix-stats2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8em; }
+.ix-stat__label { font-size: max(11px, .8em); font-weight: 550; color: var(--ix-text-3); }
+.ix-stat__value { font-size: 1.85em; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.ix-stat__value.is-accent { color: var(--ix-accent-text); }
+.ix-up { margin-left: .3em; font-size: .46em; font-weight: 650; letter-spacing: 0; color: var(--ix-success); vertical-align: .35em; }
+.ix-target { display: flex; align-items: center; gap: .55em; font-size: .86em; font-weight: 650; }
+.ix-input { display: inline-flex; align-items: center; height: 2.2em; padding: 0 .8em; border-radius: .7em; border: 1.5px solid var(--ix-border-strong); font-weight: 500; min-width: 4.5em; }
+
+/* kalendarz */
+.ix-month { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .28em; }
+.ix-wd { padding: 0 .25em .15em; font-size: max(11px, .74em); font-weight: 600; color: var(--ix-text-2); }
+.ix-cell { display: flex; flex-direction: column; justify-content: space-between; gap: .2em; min-height: 2.7em; padding: .3em .35em; border-radius: .65em; border: 1.5px solid var(--ix-border); font-size: max(11px, .8em); font-weight: 700; line-height: 1; }
+.ix-cell.is-other { opacity: .62; }
+.ix-cell.is-off { background: color-mix(in oklab, var(--ix-success) 10%, transparent); }
+.ix-cell.is-today { border-color: var(--ix-text); box-shadow: 0 0 0 1px var(--ix-text); }
+.ix-cell > i { display: block; height: .32em; border-radius: 99px; background: var(--k); }
+.ix-legend { display: flex; flex-wrap: wrap; gap: .35em .9em; font-size: max(11px, .76em); color: var(--ix-text-2); }
+.ix-legend > span { display: inline-flex; align-items: center; gap: .35em; }
+.ix-legend > span::before { content: ""; width: .55em; height: .55em; border-radius: 50%; background: var(--k); }
+.ix-notif { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .75em; align-items: start; padding: .85em .95em; border-radius: 1.15em; background: #ffffff; color: #14161c; box-shadow: 0 1px 2px rgb(20 22 28 / .1), 0 14px 30px -14px rgb(20 22 28 / .35); }
+.ix-notif > img { width: 2.4em; height: 2.4em; border-radius: .6em; }
+.ix-notif__app { display: flex; justify-content: space-between; gap: .5em; font-size: max(11px, .78em); color: #626876; }
+.ix-notif__title { margin-top: .15em; font-weight: 650; font-size: .95em; line-height: 1.25; }
+.ix-notif__body { margin-top: .15em; font-size: .86em; line-height: 1.3; color: #4a4f5c; }
+
+/* windows: the desktop app (dark Pulpit), a light window, a browser, a phone */
+/* the desktop app in its frame: the window runs on past the frame's foot, which cuts it under a fade */
+.frame.ixw-frame { display: block; padding: 0; margin-top: var(--s-7); border: 0; border-radius: 20px; background: #111318; box-shadow: 0 0 0 1px rgb(20 22 28 / .7), 0 48px 90px -48px rgb(20 22 28 / .6); min-height: 0; }
+.frame.ixw-frame::after { content: ""; position: absolute; inset: auto 0 0 0; z-index: 2; height: 72px; background: linear-gradient(transparent, #111318); pointer-events: none; }
+.ixw { position: relative; display: flex; flex-direction: column; padding-bottom: 96px; background: var(--ix-bg); font-size: 14.5px; }
+.ixw .ix-mb { font-size: 12px; padding: 0 5px; }
+.ixw .ix-mb > span { display: none; }
+@media (min-width: 1400px) { .ixw .ix-mb > span { display: inline; } }
+.ix-off-short { display: none; }
+@media (max-width: 1279px) { .ix-off-full { display: none; } .ix-off-short { display: inline; } }
+.ixw__top { display: flex; align-items: center; gap: 22px; padding: 14px 28px; }
+.ixw__brand { display: inline-flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 700; letter-spacing: -0.02em; flex: none; }
+.ixw__brand img { width: 30px; height: 30px; border-radius: 7px; }
+.ixw__nav { display: flex; gap: 2px; flex: 1; min-width: 0; overflow: hidden; }
+.ixw__nav > span { display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 13px; border-radius: 999px; font-size: 14.5px; font-weight: 500; color: var(--ix-text-2); white-space: nowrap; }
+.ixw__nav > span.is-on { background: var(--ix-text); color: var(--ix-bg); font-weight: 600; }
+.ixw__nav i { min-width: 19px; padding: 0 6px; border-radius: 99px; font-style: normal; font-size: 11.5px; font-weight: 700; line-height: 19px; text-align: center; color: var(--ix-danger); background: color-mix(in oklab, var(--ix-danger) 16%, transparent); }
+.ixw__acct { display: flex; align-items: center; gap: 9px; height: 40px; padding: 5px 15px; border-radius: 20px; background: var(--ix-surface); font-size: 12px; line-height: 1.3; color: var(--ix-text-2); flex: none; }
+.ixw__acct strong { display: block; font-size: 12.5px; font-weight: 600; color: var(--ix-text); }
+.ixw__acct .ix-i { width: 16px; height: 16px; }
+.ixw__hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 6px 36px 0; }
+.ixw__hero .ix-title { font-size: 40px; margin-top: 4px; }
+.ixw__cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 0 44px; padding: 22px 36px 0; flex: 1; min-height: 0; }
+.ixw__day { display: grid; align-content: start; gap: 8px; }
+.ixw__row { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; }
+.ixw__time { padding-top: 14px; font-size: 13px; color: var(--ix-text-2); font-variant-numeric: tabular-nums; }
+.ixw__time b { display: block; font-size: 16px; font-weight: 700; color: var(--ix-text); }
+.ixw .ix-block__top { font-size: 1.32em; }
+.ixw__side { display: grid; align-content: start; gap: 12px; }
+.ixw__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 16px; }
+.ixw__pair .ix-head { margin-bottom: 6px; }
+.ix-win { overflow: hidden; border-radius: 14px; background: var(--ix-bg); box-shadow: 0 0 0 1px rgb(20 22 28 / .12), 0 24px 48px -24px rgb(20 22 28 / .45); }
+.ix-win__bar { display: flex; align-items: center; gap: .6em; height: 3.3em; padding: 0 .9em; border-bottom: 1px solid var(--ix-border); background: var(--ix-bg); }
+.ix-win__bar img { width: 1.6em; height: 1.6em; border-radius: .4em; }
+.ix-win__bar b { font-size: 1.1em; font-weight: 700; letter-spacing: -0.02em; }
+.ix-win__body { display: grid; gap: .7em; padding: 1em 1.1em 2em; }
+.ix-pill { display: inline-flex; align-items: center; height: 2.15em; padding: 0 .85em; border-radius: 999px; font-size: .9em; font-weight: 500; color: var(--ix-text-2); white-space: nowrap; }
+.ix-pill.is-on { background: var(--ix-text); color: var(--ix-bg); font-weight: 600; }
+.ix-update { display: flex; align-items: center; gap: .55em; margin-left: auto; padding: .4em .95em; border-radius: 1.3em; background: var(--ix-accent); color: #ffffff; font-size: .8em; line-height: 1.25; white-space: nowrap; }
+.ix-update strong { display: block; font-size: 1.04em; font-weight: 600; }
+.ix-update .ix-i { width: 1.25em; height: 1.25em; }
+.ix-tabs { display: flex; align-items: center; gap: .9em; height: 2.9em; padding: 0 .9em; background: var(--ix-surface-2); }
+.ix-dots { display: flex; gap: .35em; } .ix-dots i { width: .65em; height: .65em; border-radius: 50%; background: var(--ix-border-strong); }
+.ix-tab { display: inline-flex; align-items: center; gap: .45em; align-self: end; height: 2.2em; padding: 0 1.1em 0 .8em; border-radius: .7em .7em 0 0; background: var(--ix-bg); font-size: .86em; font-weight: 600; }
+.ix-tab img { width: 1.2em; height: 1.2em; border-radius: .3em; }
+.ix-welcome { display: grid; justify-items: center; gap: .6em; padding: 1.4em 1.2em 2em; text-align: center; }
+.ix-welcome > img { width: 3em; height: 3em; border-radius: .7em; }
+.ix-welcome__h { font-size: 1.75em; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
+.ix-welcome__h span { color: var(--ix-accent-text); }
+.ix-options { display: grid; grid-template-columns: 1fr 1fr; gap: .6em; width: 100%; margin-top: .4em; text-align: left; }
+.ix-option { display: grid; gap: .3em; padding: .85em; border-radius: 1em; background: var(--ix-surface); }
+.ix-option b { font-size: .92em; font-weight: 650; line-height: 1.2; }
+.ix-option .ix-sub { font-size: .76em; line-height: 1.3; }
+.ix-phone { width: 280px; height: 570px; padding: 8px; border-radius: 44px; background: #0d0f13; box-shadow: inset 0 0 0 1.5px #2b2f38, 0 40px 70px -30px rgb(0 0 0 / .55); margin-inline: auto; }
+.ix-phone__screen { position: relative; height: 100%; overflow: hidden; border-radius: 36px; background: var(--ix-bg); font-size: 13px; }
+.ix-phone__status { display: flex; align-items: center; justify-content: space-between; height: 44px; padding: 0 26px 0 30px; font-size: 14px; font-weight: 650; }
+.ix-phone__status span { display: flex; align-items: center; gap: 5px; }
+.ix-phone__status i { display: block; width: 3px; border-radius: 1px; background: var(--ix-text); }
+.ix-phone__status em { display: block; width: 22px; height: 11px; border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--ix-text); position: relative; }
+.ix-phone__status em::after { content: ""; position: absolute; inset: 2.5px 6px 2.5px 2.5px; border-radius: 1px; background: var(--ix-text); }
+.ix-phone__body { display: grid; gap: 9px; padding: 4px 16px 16px; }
+.ix-phone .ix-title { font-size: 25px; }
+.ix-phone .ix-h2 { font-size: 17px; margin-top: 4px; }
+.ix-toast { position: absolute; left: 14px; right: 14px; top: 336px; z-index: 2; display: flex; align-items: flex-start; gap: 9px; padding: 11px 13px; border-radius: 15px; background: #14161c; color: #f1f2f4; font-size: 12.5px; font-weight: 550; line-height: 1.35; box-shadow: 0 24px 60px -24px rgb(20 22 28 / .5); }
+.ix-toast .ix-i { width: 16px; height: 16px; margin-top: 1px; color: #4ade97; stroke-width: 2.6; }
+.ix-ann { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: start; padding: 10px 0; border-top: 1px solid var(--ix-border); }
+.ix-ann__icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; color: color-mix(in oklab, var(--k) 75%, var(--ix-text)); background: color-mix(in oklab, var(--k) 16%, transparent); }
+.ix-ann__icon .ix-i { width: 15px; height: 15px; }
+.ix-ann b { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; font-size: 13px; font-weight: 650; line-height: 1.3; }
+.ix-ann p { margin-top: 3px; font-size: 12px; color: var(--ix-text-3); }
+.ix-hint { display: flex; align-items: flex-start; gap: 10px; margin: 6px 12px 0; padding: 12px 12px 12px 14px; border-radius: 16px; font-size: 12px; line-height: 1.4; color: var(--ix-text-2); background: var(--ix-accent-soft); }
+.ix-hint strong { display: block; font-size: 12.5px; color: var(--ix-text); }
+.ix-hint > .ix-i { width: 18px; height: 18px; margin-top: 1px; color: var(--ix-accent-text); }
+.ix-hint > .ix-i:last-child { width: 15px; height: 15px; color: var(--ix-text-3); }
+.ix-acct { display: grid; gap: 10px; padding: 14px; border-radius: 18px; background: var(--ix-surface); }
+.ix-acct__row { display: flex; align-items: center; gap: 10px; }
+.ix-avatar { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--ix-accent-soft); color: var(--ix-accent-text); font-weight: 700; font-size: 13px; }
+.ix-synced { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--ix-success); }
+.ix-synced .ix-i { width: 15px; height: 15px; }
+
+/* ---------------------------------------------------------------- the dealt CSS grounds keep the system's section box
+   backgrounds.css spaces a ground's section for pages without the screen rhythm (its own padding, a grid that centres
+   the words); in main the section keeps system.css's box: the h2 --padt under the top, one or two screens */
+main > section.section.section:is(.bg-dots, .bg-band) { display: block; align-content: normal; min-height: 0; padding: var(--padt) 0 calc(var(--padb) + var(--bar)); }
+@media (min-width: 640px) and (max-width: 1279px) {
+  main > section.section.section:is(.bg-dots, .bg-band) { display: flex; flex-direction: column; min-height: calc(var(--h, 1) * 100svh); }
+}
+@media (max-width: 639px) {
+  main > section.section.section:is(.bg-dots, .bg-band) { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: 1fr; grid-auto-rows: auto; min-height: calc(var(--hm, var(--h, 1)) * 100lvh); }
+}
+
+/* ---------------------------------------------------------------- the hero's collage (layout.css places it) */
+.ly-collage { container-type: size; }
+.ly-collage .ix { font-size: max(13px, 2.15cqmin); }
+.ly-collage .ly-piece.ix-card { background: var(--ix-surface); padding: 1em 1.1em; }
+.ly-collage .ly-piece.is-quiet-corner { padding-bottom: 3.4em; }
+.pc-head .ix-title { margin-top: .25em; font-size: 1.75em; }
+.pc-week .ix-week { --wh: 100%; flex: 1; min-height: 0; }
+.pc-week { display: flex; flex-direction: column; gap: .7em; }
+.pc-week .ix-day { min-height: 0; }
+.pc-week .ix-day__col { height: auto; flex: 1; min-height: 0; }
+/* a narrow collage (1024 to 1279, where it sits beside the words): the week's columns keep only their dates */
+@container (max-width: 560px) { .pc-week .ix-wdn { display: none; } }
+/* stacked under the words (a tablet, a phone), the collage spans the container: a piece wider than half of it
+   runs from line to line, the narrower ones start on the left line or end on the right one */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .ly-collage .pc-head { left: 0 !important; top: 0 !important; width: 100% !important; }
+  .ly-collage .pc-day { left: 0 !important; top: 21% !important; width: 48% !important; }
+  .ly-collage .pc-week { left: 52% !important; top: 21% !important; width: 48% !important; height: 79% !important; }
+  .ly-collage .pc-sugg { left: 0 !important; top: 0 !important; width: 100% !important; }
+  .ly-collage .pc-limits { left: 52% !important; top: 52% !important; width: 48% !important; height: 48% !important; }
+  .ly-collage .pc-mark { left: 0 !important; top: 52% !important; width: 48% !important; }
+  .ly-collage .pc-avg { left: 0 !important; top: 0 !important; width: 48% !important; }
+  .ly-collage .pc-session { left: 52% !important; top: 0 !important; width: 48% !important; }
+  .ly-collage .pc-terms { left: 0 !important; top: 30% !important; width: 100% !important; height: 70% !important; }
+}
+@media (max-width: 639px) {
+  .ly-collage .pc-week { display: none; }
+  .ly-collage .pc-head { left: 0 !important; top: 0 !important; width: 100% !important; }
+  .ly-collage .pc-head .ix-hello { display: none; }
+  .ly-collage .pc-head .ix-title { margin-top: 0; font-size: 1.5em; }
+  .ly-collage .pc-day { left: 0 !important; width: 100% !important; top: 23% !important; }
+  .ly-collage .pc-day .ix-block { --bh: 4.6em !important; }
+  .ly-collage .pc-day .ix-gap { --gh: 3em !important; }
+}
+
+/* ---------------------------------------------------------------- card groups */
+#frekwencja .panel { --p-h: 336px; }
+#kalendarz .panel { --p-h: 348px; }
+.panel .ix, .menu-card .ix { font-size: 14px; }
+.panel .ix-card { box-shadow: 0 1px 2px rgb(20 22 28 / .08), 0 22px 44px -22px rgb(20 22 28 / .4); }
+.menu-card .ix { font-size: 12px; }
+/* the versions as a line-up: each version's screen first, then its name, its action and what it does */
+#wersje .panel { --p-h: 0px; }
+#wersje .tile__media { container-type: inline-size; }
+#wersje .tile { grid-template-columns: minmax(0, 1fr); }   /* a tile never grows past its column */
+#wersje .tile__head { flex-wrap: wrap; gap: var(--s-2) var(--s-4); }   /* the action goes under the name when the row is narrow */
+#wersje .tile__head > h3 { display: flex; align-items: center; gap: var(--s-3); }
+#wersje .tile__head .ic-tile { flex: none; }
+#wersje .tile > p { max-width: 46ch; }
+@container (max-width: 330px) { .ix-win__bar > b, .ix-win__bar > .ix-pill { display: none; } .ix-options { grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 1024px) and (max-width: 1279px) { #wersje .tile__media { --tile-ratio: 5 / 4; } }
+@media (max-width: 1023px) { #wersje .grid > .tile { grid-column: 1 / -1; } }
+@media (min-width: 640px) and (max-width: 1023px) { #wersje .tile__media { --tile-ratio: 16 / 9; } }
+@media (max-width: 639px) {
+  #frekwencja .panel { --p-h: 172px; }
+  /* the limits and the classes to mark show their first two rows here; the rest would sit unseen under the panel's edge */
+  #frekwencja .ix-limits > .ix-limit:nth-child(n + 3), #frekwencja .ix-mark:nth-child(n + 3) { display: none; }
+  #kalendarz .panel { --p-h: 300px; }
+  .panel .ix { font-size: 13px; }
+  /* the dark band's foot as deep as the space above the next heading, so the change of ground reads as one gap */
+  #telefon { padding-bottom: calc(var(--padt) + var(--bar)); }
+  /* the three versions share their two screens: each tile's screen takes what its words leave, so the line-up
+     ends on the second screen's foot like every other section */
+  #wersje > .wrap > .grid { flex: 1 1 auto; grid-auto-rows: 1fr; }
+  #wersje { padding-bottom: calc(var(--padt) + var(--bar)); }   /* as deep as the space inside the close's top edge */
+  #wersje .tile { grid-template-rows: minmax(240px, 1fr) auto auto; }
+  #wersje .tile__media { aspect-ratio: auto; }
+}
+/* the questions run down to the screen's foot beside their heading, their rules evenly spaced, so the list
+   ends where every other section's content ends (from 1280, where a section is exactly one screen tall; below
+   it the section grows with its content and equal rows would only make it taller) */
+@media (min-width: 1024px) and (max-width: 1279px) { #faq .faq > .faq__item { padding-block: var(--s-4); } #faq .faq > .faq__item:first-child { padding-top: 0; } }
+@media (min-width: 1280px) {
+  #faq > .wrap { align-content: stretch; }
+  #faq .faq { align-self: stretch; display: grid; grid-auto-rows: 1fr; }
+  #faq .faq__item { align-content: start; }
+}
+/* a tablet: each screen's card row of the 2x2 runs down to that screen's foot, as from 1024 (system.css) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  #frekwencja.g2 > .wrap > .grid:last-child, #frekwencja.g2 > .wrap > .group > .grid:last-child { align-self: stretch; flex: 1 1 auto; min-height: 0; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) { #kalendarz .panel { --p-h: 420px; } }
+/* the footer: its three link columns span the row at every width; the trademark line under the year */
+#contact .footer__legal > :last-child { flex-basis: 100%; }
+@media (max-width: 1023px) { #contact .footer__col { grid-column: auto / span 4; } }
+@media (max-width: 639px) { #contact .footer__lede { display: none; } }
+/* the menu button's ring solid (the kit's secondary look), so its round edge, not the icon inside it, ends on the
+   content's right line like the logo starts on the left; a narrow phone keeps the three phone tabs on one row */
+@media (max-width: 1023px) { .nav__toggle { border-color: color-mix(in oklab, var(--ink) 22%, var(--bg)); } }
+@media (max-width: 379px) { #telefon .tab { padding-inline: var(--s-3); } }
+/* a tablet: the hero's one button at its own width, under the words (full width only on a phone) */
+@media (min-width: 640px) and (max-width: 1023px) { .hero--triptych .hero__cta .btn { width: auto; } }
+/* the oceny frame: the simulator rising, its result over its lower right */
+#oceny .frame .ix { font-size: 14px; }
+#oceny .ix-result { width: 300px; box-shadow: 0 1px 2px rgb(20 22 28 / .1), 0 26px 52px -22px rgb(20 22 28 / .45); }
+@media (min-width: 1024px) { #oceny .frame { --ratio: 0px; height: min(var(--ly-fit), 640px); } }
+@media (max-width: 1023px) { #oceny .frame, #telefon .frame { margin-top: var(--s-5); } }
+@media (max-width: 639px) { #oceny .frame { --ratio: 72%; } }
+/* the telefon frame: a phone on the lit ground; on a phone the section is two screens (.g2m), the words on the
+   first and the whole phone on the second */
+#telefon .frame { --ratio: 80%; }
+@media (min-width: 1024px) { #telefon .frame { --ratio: 0px; height: min(var(--ly-fit), 640px); } }
+@media (max-width: 639px) { #telefon .frame { --ratio: 0px; height: 100%; margin-top: 0; } }
+@media (min-width: 640px) and (max-width: 1279px) { #kalendarz { --h: 2; } }
+@media (min-width: 640px) and (max-width: 1023px) { #wersje { --h: 2; } }
+@media (min-width: 1024px) and (max-width: 1279px) { #frekwencja .panel { --p-h: 240px; } }
+/* the app window at smaller widths: the app's own narrower layouts */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .ixw__nav > span:nth-child(n + 5) { display: none; }
+  .ixw__cols { gap: 0 32px; }
+}
+@media (max-width: 1279px) { .ixw__pair { display: none; } }
+@media (max-width: 1023px) {
+  .frame.ixw-frame { min-height: 460px; }
+  .ixw__nav, .ixw__acct { display: none; }
+  .ixw__cols { grid-template-columns: minmax(0, 1fr); }
+  .ixw__side { display: none; }
+}
+@media (max-width: 639px) {
+  .frame.ixw-frame { min-height: 380px; }
+  .ixw { font-size: 13px; }
+  .ixw__top { padding: 12px 18px; }
+  .ixw__hero { padding: 4px 18px 0; }
+  .ixw__hero .ix-title { font-size: 26px; }
+  .ixw__cols { padding: 16px 18px 0; }
+  .ixw__row { grid-template-columns: 42px minmax(0, 1fr); gap: 8px; }
+}
+</style>
+</head>
+<body>
+<!-- type: software (site-kind software): Indeks, an app for students on Windows, the phone and the browser
+     deal: hero triptych; nav nav-cards; close close-type; footer footer-statement; rhythm dark-band (#telefon);
+       buttons tonal; mark wordmark, replaced by the client's own app icon; radius round (a consumer app); lit ground sand
+     palette: the client's own colours through start.mjs brand (#f1f2f4 ground, #14161c ink, #2340e8 cobalt from the
+       app's light theme and its icon); type: bricolage (the app's own face, set in its wordmark and its whole UI;
+       the dealt first pairing, outfit, would clash with the wordmark and with the app shown at true size)
+     effect: gradient-mesh, held still in the one [data-visual] frame (#oceny). Card grounds: the lit sand ground plain
+       (painterly-landscape was dealt for them; not used, since a card group takes one painted panel at most)
+     css grounds (backgrounds/pick.mjs): bg-dots on #plan, bg-band on #weekend
+     moments: liquid-type in #weekend (the statement ripples under the pointer: the planner's promise, said once, large);
+       line-carries-colour in #telefon (the dark band arrives along one climbing line)
+     screens at 1440x900: hero 1, #plan 1, #weekend 1, #frekwencja 2, #oceny 1, #kalendarz 1, #telefon 1, #faq 1,
+       #wersje 1 (a line-up of the three versions, right before the close), footer 1 -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Przejdź do treści</a>
+    <a class="nav__logo" href="#top"><img src="favicon.svg" alt="" width="28" height="28">Indeks</a>
+    <nav class="nav__links" aria-label="Główne">
+      <div class="nav__item"><a class="nav__link" href="#plan">Plan</a></div>
+      <div class="nav__item"><a class="nav__link" href="#frekwencja">Frekwencja</a></div>
+      <div class="nav__item"><a class="nav__link" href="#oceny">Oceny</a></div>
+      <div class="nav__item"><a class="nav__link" href="#telefon">Telefon</a></div>
+      <div class="nav__item">
+        <a class="nav__link" href="#wersje">Wersje <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-4" href="https://github.com/BoboToZiomal/indeks/releases/latest">
+              <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 330px; --ax: 20px; --ay: 22px">
+                <div class="ui ui-ix ix ix-win" role="img" aria-label="Indeks na Windows z przyciskiem nowej wersji">
+                  <div class="ix-win__bar"><img loading="lazy" src="favicon.svg" alt="" width="20" height="20"><b>Indeks</b><span class="ix-update"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span><strong>Nowa wersja 0.7.0</strong>kliknij, by zainstalować</span></span></div>
+                  <div class="ix-win__body"><p class="ix-hello">Dzień dobry. Czwartek, 12 listopada.</p></div>
+                </div>
+              </div></div></div>
+              <span class="t-card">Windows</span>
+              <span class="t-small muted">Instalator, który aktualizuje się sam</span>
+            </a>
+            <a class="menu-card span-4" href="https://bobotoziomal.github.io/indeks/">
+              <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 330px; --ax: 20px; --ay: 22px">
+                <div class="ui ui-ix ix ix-win" role="img" aria-label="Indeks w przeglądarce, ekran powitalny">
+                  <div class="ix-tabs"><span class="ix-dots"><i></i><i></i><i></i></span><span class="ix-tab"><img loading="lazy" src="favicon.svg" alt="" width="14" height="14">Indeks</span></div>
+                  <div class="ix-welcome"><p class="ix-welcome__h">Twoje studia.<br><span>W jednym miejscu.</span></p></div>
+                </div>
+              </div></div></div>
+              <span class="t-card">Przeglądarka</span>
+              <span class="t-small muted">Bez instalacji, na każdym komputerze</span>
+            </a>
+            <a class="menu-card span-4" href="#wersje">
+              <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 330px; --ax: 20px; --ay: 22px">
+                <div class="ui ui-ix ix ix-card" role="img" aria-label="Podpowiedź na iPhonie: dodaj Indeks do ekranu początkowego">
+                  <div class="ix-hint" style="margin: 0"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg><span><strong>Dodaj Indeks do ekranu początkowego</strong>Stuknij Udostępnij, a potem Do ekranu początkowego.</span></div>
+                </div>
+              </div></div></div>
+              <span class="t-card">iPhone</span>
+              <span class="t-small muted">Z ekranu początkowego, na pełnym ekranie</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="https://bobotoziomal.github.io/indeks/">Otwórz Indeks</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--triptych" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="span-3">
+        <h1 id="hero-h">Frekwencja, plan zajęć i oceny</h1>
+        <p class="hero__lead">Aplikacja dla studentów na Windows, telefon i przeglądarkę. Dodajesz zajęcia raz, a Indeks liczy, ile razy możesz jeszcze nie iść.</p>
+      </div>
+      <div class="ly-collage span-6 start-4" role="img" aria-label="Trzy widoki Indeksu po kolei: czwartek z zajęciami i tydzień w miniaturze; propozycja długiego weekendu i limity nieobecności; najbliższe terminy, średnia ważona ECTS i dni do sesji.">
+        <div class="ly-collage__set is-on">
+          <div class="ly-piece ix ix-card pc-head" style="left: 4%; top: 5%; width: 58%">
+            <p class="ix-hello">Dzień dobry. Czwartek, 12 listopada.</p>
+            <p class="ix-title">Za 25 min: Bazy danych, Aula A.</p>
+          </div>
+          <div class="ly-piece ix ix-card pc-day" style="left: 4%; top: 27%; width: 43%">
+            <div class="ix-stack">
+              <p class="ix-h">Dziś</p>
+              <div class="ix-block" style="--c: var(--bd); --bh: 6.2em"><div class="ix-block__top"><span>Bazy danych</span><span>Aula A</span></div><div class="ix-block__meta"><span>10:15–11:45, Wykład</span><span class="ix-chip">za 25 min</span></div></div>
+              <div class="ix-gap" style="--gh: 4.4em">Okienko, 2 h 30 min</div>
+              <div class="ix-block" style="--c: var(--po); --bh: 6.2em"><div class="ix-block__top"><span>Programowanie obiektowe</span><span>Lab 3.07</span></div><div class="ix-block__meta"><span>14:15–15:45, Laboratorium</span></div></div>
+            </div>
+          </div>
+          <div class="ly-piece ix ix-card pc-week is-quiet-corner" style="left: 51%; top: 20%; width: 45%; height: 76%">
+            <p class="ix-h">Ten tydzień</p>
+            <div class="ix-week">
+              <div class="ix-day"><span class="ix-day__label"><span class="ix-wdn">Pn</span>9</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--am); --t: 18.9%; --h: 16.2%"></span><span class="ix-mb" style="--c: var(--fiz); --t: 62.2%; --h: 16.2%"></span></div></div></div>
+              <div class="ix-day"><span class="ix-day__label"><span class="ix-wdn">Wt</span>10</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--fiz); --t: 0%; --h: 16.2%"></span><span class="ix-mb" style="--c: var(--po); --t: 40.5%; --h: 16.2%"></span><span class="ix-mb" style="--c: var(--ang); --t: 83.8%; --h: 16.2%"></span></div></div></div>
+              <div class="ix-day is-off"><span class="ix-day__label"><span class="ix-wdn">Śr</span>11</span><div class="ix-day__col"><span class="ix-wdn">Święto</span></div></div>
+              <div class="ix-day is-today"><span class="ix-day__label"><span class="ix-wdn">Czw</span>12</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--bd); --t: 18.9%; --h: 16.2%"></span><span class="ix-mb" style="--c: var(--po); --t: 62.2%; --h: 16.2%"></span></div></div></div>
+              <div class="ix-day"><span class="ix-day__label"><span class="ix-wdn">Pt</span>13</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--am); --t: 0%; --h: 16.2%"></span><span class="ix-mb" style="--c: var(--aisd); --t: 40.5%; --h: 16.2%"></span></div></div></div>
+            </div>
+            <p class="ix-note ix-sub">Jutro obowiązuje plan środowy.</p>
+          </div>
+        </div>
+        <div class="ly-collage__set" aria-hidden="true">
+          <div class="ly-piece ix ix-card ix-sugg pc-sugg" style="left: 4%; top: 4%; width: 54%">
+            <div class="ix-head"><div><p class="ix-sugg__title">3 dni wolnego</p><p class="ix-sub">sob 14 lis – pon 16 lis</p></div></div>
+            <div class="ix-days"><span>sob<br>14</span><span>nd<br>15</span><span class="is-skip">pn<br>16</span></div>
+            <p class="ix-sub"><b>Opuszczasz:</b> poniedziałek 16.11</p>
+            <div class="ix-crow"><span class="ix-dot" style="--c: var(--am)"></span><span>Analiza matematyczna II</span><span>Wykład (bez limitu)</span></div>
+            <div class="ix-crow"><span class="ix-dot" style="--c: var(--fiz)"></span><span>Fizyka dla informatyków</span><span>Wykład (bez limitu)</span></div>
+            <div class="ix-foot"><span class="ix-badge ix-badge--ok">bez użycia limitu</span><span class="ix-btn ix-btn--sm ix-btn--primary">Zaplanuj</span></div>
+          </div>
+          <div class="ly-piece ix ix-card is-quiet-corner pc-limits" style="left: 44%; top: 46%; width: 52%; height: 50%">
+            <div class="ix-head"><p class="ix-h">Możesz opuścić</p><span class="ix-link">Frekwencja</span></div>
+            <div class="ix-list" style="margin-top: .5em">
+              <div><span class="ix-name">Bazy danych</span><span class="ix-pips"><i class="ix-pip is-used"></i><i class="ix-pip is-used"></i><span class="ix-left is-over">limit wyczerpany</span></span></div>
+              <div><span class="ix-name">Analiza matematyczna II</span><span class="ix-pips"><i class="ix-pip" style="--c: var(--am)"></i><i class="ix-pip is-used"></i><span class="ix-left">1 raz</span></span></div>
+              <div><span class="ix-name">Programowanie obiektowe</span><span class="ix-pips"><i class="ix-pip" style="--c: var(--po)"></i><i class="ix-pip is-used"></i><span class="ix-left">1 raz</span></span></div>
+            </div>
+          </div>
+          <div class="ly-piece ix ix-card pc-mark" style="left: 4%; top: 50%; width: 36%">
+            <div class="ix-head"><p class="ix-h">Oznacz obecność</p></div>
+            <div class="ix-mark" style="margin-top: .5em">
+              <div class="ix-mark__who"><span class="ix-dot" style="--c: var(--ang)"></span><div><p class="ix-limit__name">Język angielski B2</p><p class="ix-limit__meta">Lektorat, wtorek 10.11, 16:15</p></div></div>
+              <div class="ix-mark__btns"><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Obecność</span><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Nieobecność</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ly-collage__set" aria-hidden="true">
+          <div class="ly-piece ix ix-card pc-avg" style="left: 4%; top: 4%; width: 44%">
+            <p class="ix-stat__label">Średnia ważona ECTS</p>
+            <p class="ix-stat__value is-accent">4,11</p>
+            <p class="ix-sub">arytmetyczna 4,07, z 51 ECTS</p>
+          </div>
+          <div class="ly-piece ix ix-card pc-session" style="left: 52%; top: 4%; width: 44%">
+            <p class="ix-stat__label">Do sesji</p>
+            <p class="ix-stat__value">74 dni</p>
+            <p class="ix-sub">od 25 stycznia</p>
+          </div>
+          <div class="ly-piece ix ix-card is-quiet-corner pc-terms" style="left: 22%; top: 34%; width: 74%; height: 62%">
+            <div class="ix-head"><p class="ix-h">Terminy</p><span class="ix-link">Kalendarz</span></div>
+            <div class="ix-list" style="margin-top: .5em">
+              <div class="ix-term"><b>18 lis</b><span>Kolokwium 2 – całki podwójne, 08:30</span></div>
+              <div class="ix-term"><b>20 lis</b><span>Sprawozdanie z laboratorium 4 (SQL – złączenia), 12:15</span></div>
+              <div class="ix-term"><b>24 lis</b><span>Prezentacja: Technology &amp; privacy, 16:15</span></div>
+              <div class="ix-term"><b>3 gru</b><span>Projekt zespołowy – etap 1 (diagram klas), 23:59</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="span-3 start-10 hero__cta"><a class="btn btn--primary" href="https://bobotoziomal.github.io/indeks/">Otwórz Indeks</a></div>
+    </div></div>
+  </section>
+
+  <section class="section bg-dots" id="plan" aria-labelledby="plan-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <h2 id="plan-h" class="span-5">Plan dnia na pierwszym ekranie</h2>
+        <p class="span-6 start-7 t-lead muted">Pulpit pokazuje, za ile i w której sali zaczynają się następne zajęcia, ile trwa okienko, najbliższe terminy i to, ile nieobecności zostało w limicie.</p>
+      </div>
+      <div class="frame ixw-frame fill">
+      <div class="ui ui-ix ix ix--dark ixw" role="img" aria-label="Pulpit Indeksu w ciemnym motywie, czwartek 12 listopada: za 25 minut Bazy danych w Auli A, potem okienko 2 godziny 30 minut i Programowanie obiektowe w Lab 3.07. Obok tydzień w miniaturze z piątkiem według planu środowego, najbliższe terminy i przedmioty, z których można jeszcze opuścić zajęcia.">
+        <div class="ixw__top">
+          <span class="ixw__brand"><img loading="lazy" src="favicon.svg" alt="" width="30" height="30">Indeks</span>
+          <span class="ixw__nav"><span class="is-on">Pulpit</span><span>Plan tygodnia</span><span>Frekwencja <i>2</i></span><span>Kalendarz</span><span>Oceny</span><span>Ogłoszenia</span><span>Ustawienia</span></span>
+          <span class="ixw__acct"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg><span><strong>Konto</strong>zsynchronizowano</span></span>
+        </div>
+        <div class="ixw__hero">
+          <div><p class="ix-hello">Dzień dobry. Czwartek, 12 listopada.</p><p class="ix-title">Za 25 min: Bazy danych, Aula A.</p></div>
+        </div>
+        <div class="ixw__cols">
+          <div class="ixw__day">
+            <p class="ix-h2">Dziś</p>
+            <div class="ixw__row"><span class="ixw__time"><b>10:15</b>11:45</span><div class="ix-block" style="--c: var(--bd); --bh: 7.4em"><div class="ix-block__top"><span>Bazy danych</span><span>Aula A</span></div><div class="ix-block__meta"><span>Wykład</span><span class="ix-chip">za 25 min</span></div></div></div>
+            <div class="ixw__row"><span class="ixw__time">11:45</span><div class="ix-gap" style="--gh: 6.2em">Okienko, 2 h 30 min</div></div>
+            <div class="ixw__row"><span class="ixw__time"><b>14:15</b>15:45</span><div class="ix-block" style="--c: var(--po); --bh: 7.4em"><div class="ix-block__top"><span>Programowanie obiektowe</span><span>Lab 3.07</span></div><div class="ix-block__meta"><span>Laboratorium</span></div></div></div>
+          </div>
+          <div class="ixw__side">
+            <div class="ix-head"><p class="ix-h2">Ten tydzień</p><span class="ix-link">Cały plan</span></div>
+            <div class="ix-week" style="--wh: 11.6em">
+              <div class="ix-day"><span class="ix-day__label">Pn 9</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--am); --t: 18.9%; --h: 16.2%"><span>Analiza</span></span><span class="ix-mb" style="--c: var(--fiz); --t: 62.2%; --h: 16.2%"><span>Fizyka</span></span></div></div></div>
+              <div class="ix-day"><span class="ix-day__label">Wt 10</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--fiz); --t: 0%; --h: 16.2%"><span>Fizyka</span></span><span class="ix-mb" style="--c: var(--po); --t: 40.5%; --h: 16.2%"><span>Programowanie</span></span><span class="ix-mb" style="--c: var(--ang); --t: 83.8%; --h: 16.2%"><span>Angielski</span></span></div></div></div>
+              <div class="ix-day is-off"><span class="ix-day__label">Śr 11</span><div class="ix-day__col"><span class="ix-off-full">Narodowe Święto Niepodległości</span><span class="ix-off-short">Wolne</span></div></div>
+              <div class="ix-day is-today"><span class="ix-day__label">Czw 12</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--bd); --t: 18.9%; --h: 16.2%"><span>Bazy danych</span></span><span class="ix-mb" style="--c: var(--po); --t: 62.2%; --h: 16.2%"><span>Programowanie</span></span></div></div></div>
+              <div class="ix-day"><span class="ix-day__label">Pt 13</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--am); --t: 0%; --h: 16.2%"><span>Analiza</span></span><span class="ix-mb" style="--c: var(--aisd); --t: 40.5%; --h: 16.2%"><span>Algorytmy</span></span></div></div></div>
+            </div>
+            <p class="ix-note">Jutro obowiązuje plan środowy.</p>
+            <div class="ixw__pair">
+              <div>
+                <div class="ix-head"><p class="ix-h2">Terminy</p><span class="ix-link">Kalendarz</span></div>
+                <div class="ix-list">
+                  <div class="ix-term"><b>18 lis</b><span>Kolokwium 2 – całki podwójne, 08:30</span></div>
+                  <div class="ix-term"><b>20 lis</b><span>Sprawozdanie z laboratorium 4 (SQL – złączenia), 12:15</span></div>
+                  <div class="ix-term"><b>24 lis</b><span>Prezentacja: Technology &amp; privacy, 16:15</span></div>
+                </div>
+              </div>
+              <div>
+                <div class="ix-head"><p class="ix-h2">Możesz opuścić</p><span class="ix-link">Frekwencja</span></div>
+                <div class="ix-list">
+                  <div><span class="ix-name">Bazy danych</span><span class="ix-pips"><i class="ix-pip is-used"></i><i class="ix-pip is-used"></i><span class="ix-left is-over">limit wyczerpany</span></span></div>
+                  <div><span class="ix-name">Analiza matematyczna II</span><span class="ix-pips"><i class="ix-pip" style="--c: var(--am)"></i><i class="ix-pip is-used"></i><span class="ix-left">1 raz</span></span></div>
+                  <div><span class="ix-name">Programowanie obiektowe</span><span class="ix-pips"><i class="ix-pip" style="--c: var(--po)"></i><i class="ix-pip is-used"></i><span class="ix-left">1 raz</span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section statement bg-band" id="weekend" data-moment="liquid-type" aria-labelledby="weekend-h">
+    <div class="wrap stack-6">
+      <h2 id="weekend-h" class="mo-lt__type">Długi weekend w granicach limitu</h2>
+      <p class="t-lead measure">Planer szuka dni, które łączą się z weekendem, świętem, dniem rektorskim albo przerwą, i sprawdza, czy nieobecności zmieszczą się w limitach. Nieobecność planujesz jednym kliknięciem.</p>
+    </div>
+  </section>
+
+  <section class="section g2" id="frekwencja" aria-labelledby="frekwencja-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="frekwencja-h">Frekwencja liczona dla każdej grupy osobno. <span class="muted">Wykład, ćwiczenia i laboratorium mają własne limity.</span></h2>
+        </div>
+        <div class="grid">
+          <article class="card card--row card--open span-6 m-nolift">
+            <h3>Pokazuje, ile nieobecności zostało</h3>
+            <p>Limit ustawisz jako liczbę nieobecności, procent albo „nieobowiązkowe”, zgodnie z regulaminem lub sylabusem.</p>
+            <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 460px; --ax: max(24px, 50% - 230px); --ay: 40px; --ay-sm: 20px">
+              <div class="ui ui-ix ix ix-card" role="img" aria-label="Przedmioty i limity: Algorytmy i struktury danych, ćwiczenia, można opuścić jeszcze 2 razy; Bazy danych, laboratorium, limit wyczerpany; Analiza matematyczna II, ćwiczenia, można opuścić jeszcze raz.">
+                <p class="ix-h"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 16 2 2 4-4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Przedmioty i limity</p>
+                <div class="ix-limits" style="margin-top: .8em">
+                  <div class="ix-limit"><div class="ix-limit__top"><span class="ix-dot" style="--c: var(--aisd)"></span><div><p class="ix-limit__name">Algorytmy i struktury danych</p><p class="ix-limit__meta">Ćwiczenia · gr. 1 · limit: 2 nieobecności</p></div><span class="ix-badge ix-badge--ok">jeszcze 2 razy</span></div><div class="ix-bar"><i style="--w: 2%; --c: var(--ix-success)"></i></div><p class="ix-counts"><span>✓ 6 ✕ 0</span><span>6/15 zajęć</span></p></div>
+                  <div class="ix-limit"><div class="ix-limit__top"><span class="ix-dot" style="--c: var(--bd)"></span><div><p class="ix-limit__name">Bazy danych</p><p class="ix-limit__meta">Laboratorium · gr. 4 · limit: 2 nieobecności</p></div><span class="ix-badge ix-badge--bad">limit wyczerpany</span></div><div class="ix-bar"><i style="--w: 100%; --c: var(--ix-danger)"></i></div><p class="ix-counts"><span>✓ 4 ✕ 2</span><span>6/15 zajęć</span></p></div>
+                  <div class="ix-limit"><div class="ix-limit__top"><span class="ix-dot" style="--c: var(--am)"></span><div><p class="ix-limit__name">Analiza matematyczna II</p><p class="ix-limit__meta">Ćwiczenia · gr. 4 · limit: 2 nieobecności</p></div><span class="ix-badge ix-badge--warn">jeszcze raz</span></div><div class="ix-bar"><i style="--w: 50%; --c: var(--fiz)"></i></div><p class="ix-counts"><span>✓ 4 ✕ 1</span><span>5/13 zajęć</span></p></div>
+                  <div class="ix-limit"><div class="ix-limit__top"><span class="ix-dot" style="--c: var(--fiz)"></span><div><p class="ix-limit__name">Fizyka dla informatyków</p><p class="ix-limit__meta">Wykład · obecność nieobowiązkowa</p></div><span class="ix-badge">bez limitu</span></div><div class="ix-bar"><i style="--w: 83%; --c: var(--ix-info)"></i></div><p class="ix-counts"><span>✓ 5 ✕ 0</span><span>6/16 zajęć</span></p></div>
+                </div>
+              </div>
+            </div></div></div>
+          </article>
+          <article class="card card--row card--open span-6 m-nolift">
+            <h3>Szuka wolnego bez przekraczania limitu</h3>
+            <p>Każda propozycja pokazuje dni do opuszczenia i to, ile nieobecności zabierze z limitu.</p>
+            <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 460px; --ax: max(24px, 50% - 230px); --ay: 40px; --ay-sm: 20px">
+              <div class="ui ui-ix ix ix-card" role="img" aria-label="Planer wolnego z dwiema propozycjami: 19 dni wolnego od soboty 19 grudnia do środy 6 stycznia, przy opuszczeniu poniedziałku 21.12 i wtorku 22.12, kosztem 2 nieobecności z limitu; 3 dni wolnego od soboty 14 do poniedziałku 16 listopada bez użycia limitu.">
+                <p class="ix-h"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 8c0-2.76-2.46-5-5.5-5S2 5.24 2 8h2l1-1 1 1h4"/><path d="M13 7.14A5.82 5.82 0 0 1 16.5 6c3.04 0 5.5 2.24 5.5 5h-3l-1-1-1 1h-3"/><path d="M5.89 9.71c-2.15 2.15-2.3 5.47-.35 7.43l4.24-4.25.7-.7.71-.71 2.12-2.12c-1.95-1.96-5.27-1.8-7.42.35"/><path d="M11 15.5c.5 2.5-.17 4.5-1 6.5h4c2-5.5-.5-12-1-14"/></svg>Planer wolnego</p>
+                <div class="ix-sugg" style="margin-top: .8em; padding: .95em 1em; border-radius: 1.05em; background: var(--ix-surface-2)">
+                  <div><p class="ix-sugg__title">19 dni wolnego</p><p class="ix-sub">sob 19 gru – śr 6 sty</p></div>
+                  <p class="ix-sub"><b>Opuszczasz:</b> poniedziałek 21.12, wtorek 22.12</p>
+                  <div class="ix-stack" style="gap: .35em">
+                    <div class="ix-crow"><span class="ix-dot" style="--c: var(--am)"></span><span>Analiza matematyczna II</span><span>Wykład (bez limitu)</span></div>
+                    <div class="ix-crow"><span class="ix-dot" style="--c: var(--fiz)"></span><span>Fizyka dla informatyków</span><span>Ćwiczenia</span></div>
+                    <div class="ix-crow"><span class="ix-dot" style="--c: var(--ang)"></span><span>Język angielski B2</span><span>Lektorat</span></div>
+                  </div>
+                  <div class="ix-foot"><span class="ix-badge ix-badge--warn">2 nieobecności z limitu</span><span class="ix-btn ix-btn--sm ix-btn--primary">Zaplanuj</span></div>
+                </div>
+                <div class="ix-sugg" style="margin-top: .6em; padding: .95em 1em; border-radius: 1.05em; background: var(--ix-surface-2)">
+                  <div><p class="ix-sugg__title">3 dni wolnego</p><p class="ix-sub">sob 14 lis – pon 16 lis</p></div>
+                  <div class="ix-days"><span>sob<br>14</span><span>nd<br>15</span><span class="is-skip">pn<br>16</span></div>
+                </div>
+              </div>
+            </div></div></div>
+          </article>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card card--row card--open span-6 m-nolift">
+          <h3>Przypomina o nieoznaczonych zajęciach</h3>
+          <p>Minione zajęcia bez statusu czekają na Pulpicie, każde z przyciskiem obecności i nieobecności.</p>
+          <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit to-edge" style="--fit-max: 460px; --ax: max(24px, 50% - 230px); --ay: 40px; --ay-sm: 20px">
+            <div class="ui ui-ix ix ix-card" role="img" aria-label="Oznacz obecność: pięć minionych zajęć bez statusu z poniedziałku i wtorku, każde z przyciskami Obecność i Nieobecność.">
+              <div class="ix-head"><p class="ix-h">Oznacz obecność</p><span class="ix-badge ix-badge--warn">5 do oznaczenia</span></div>
+              <p class="ix-sub" style="margin-top: .45em">Minione zajęcia bez statusu. Bez tego limity nie będą dokładne.</p>
+              <div style="margin-top: .5em">
+                <div class="ix-mark"><div class="ix-mark__who"><span class="ix-dot" style="--c: var(--ang)"></span><div><p class="ix-limit__name">Język angielski B2</p><p class="ix-limit__meta">Lektorat, wtorek 10.11, 16:15</p></div></div><div class="ix-mark__btns"><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Obecność</span><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Nieobecność</span></div></div>
+                <div class="ix-mark"><div class="ix-mark__who"><span class="ix-dot" style="--c: var(--po)"></span><div><p class="ix-limit__name">Programowanie obiektowe</p><p class="ix-limit__meta">Wykład, wtorek 10.11, 12:15</p></div></div><div class="ix-mark__btns"><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Obecność</span><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Nieobecność</span></div></div>
+                <div class="ix-mark"><div class="ix-mark__who"><span class="ix-dot" style="--c: var(--fiz)"></span><div><p class="ix-limit__name">Fizyka dla informatyków</p><p class="ix-limit__meta">Ćwiczenia, wtorek 10.11, 08:30</p></div></div><div class="ix-mark__btns"><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Obecność</span><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Nieobecność</span></div></div>
+                <div class="ix-mark"><div class="ix-mark__who"><span class="ix-dot" style="--c: var(--fiz)"></span><div><p class="ix-limit__name">Fizyka dla informatyków</p><p class="ix-limit__meta">Wykład, poniedziałek 9.11, 14:15</p></div></div><div class="ix-mark__btns"><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Obecność</span><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Nieobecność</span></div></div>
+                <div class="ix-mark"><div class="ix-mark__who"><span class="ix-dot" style="--c: var(--am)"></span><div><p class="ix-limit__name">Analiza matematyczna II</p><p class="ix-limit__meta">Wykład, poniedziałek 9.11, 10:15</p></div></div><div class="ix-mark__btns"><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Obecność</span><span class="ix-btn ix-btn--sm"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Nieobecność</span></div></div>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
+        <article class="card card--row card--open span-6 m-nolift">
+          <h3>Uwzględnia dni odrabiane w planie</h3>
+          <p>Gdy uczelnia zamienia piątek na środę, plan pokazuje środowe zajęcia i liczy je do limitów.</p>
+          <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit to-edge" style="--fit-max: 480px; --ax: max(24px, 50% - 240px); --ay: 40px; --ay-sm: 20px">
+            <div class="ui ui-ix ix ix-card" role="img" aria-label="Tydzień od 4 stycznia 2027: od poniedziałku do środy zimowa przerwa świąteczna, w czwartek zajęcia czwartkowe, a w piątek 8 stycznia zajęcia według planu środowego: Analiza matematyczna II i Algorytmy i struktury danych.">
+              <div class="ix-head"><p class="ix-h">Tydzień od 4 stycznia</p><span class="ix-link">Cały plan</span></div>
+              <div class="ix-week" style="--wh: 10em; margin-top: .8em">
+                <div class="ix-day is-off"><span class="ix-day__label">Pn 4</span><div class="ix-day__col"><span class="ix-off-full">Zimowa przerwa świąteczna</span><span class="ix-off-short">Wolne</span></div></div>
+                <div class="ix-day is-off"><span class="ix-day__label">Wt 5</span><div class="ix-day__col"><span class="ix-off-full">Zimowa przerwa świąteczna</span><span class="ix-off-short">Wolne</span></div></div>
+                <div class="ix-day is-off"><span class="ix-day__label">Śr 6</span><div class="ix-day__col"><span class="ix-off-full">Zimowa przerwa świąteczna</span><span class="ix-off-short">Wolne</span></div></div>
+                <div class="ix-day"><span class="ix-day__label">Czw 7</span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--bd); --t: 24.1%; --h: 20.7%"></span><span class="ix-mb" style="--c: var(--po); --t: 79.3%; --h: 20.7%"></span></div></div></div>
+                <div class="ix-day"><span class="ix-day__label">Pt 8 <span class="ix-plan">śr</span></span><div class="ix-day__col"><div class="ix-track"><span class="ix-mb" style="--c: var(--am); --t: 0%; --h: 20.7%"></span><span class="ix-mb" style="--c: var(--aisd); --t: 51.7%; --h: 20.7%"></span></div></div></div>
+              </div>
+              <p class="ix-note" style="margin-top: .8em">W piątek 8.01 obowiązuje plan środowy.</p>
+              <div class="ix-stack" style="margin-top: 1.1em; padding-top: 1em; border-top: 1px solid var(--ix-border)">
+                <div class="ix-head" style="justify-content: flex-start; gap: .5em"><p class="ix-h">Piątek, 8 stycznia</p><span class="ix-badge ix-badge--accent">plan środowy</span></div>
+                <div class="ix-block" style="--c: var(--am)"><div class="ix-block__top"><span>Analiza matematyczna II</span><span>s. 2.12</span></div><div class="ix-block__meta"><span>08:30–10:00, Ćwiczenia</span></div></div>
+                <div class="ix-block" style="--c: var(--aisd)"><div class="ix-block__top"><span>Algorytmy i struktury danych</span><span>Aula B</span></div><div class="ix-block__meta"><span>12:15–13:45, Wykład</span></div></div>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="oceny" aria-labelledby="oceny-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5 split-col">
+        <h2 id="oceny-h">Oceny, średnia ważona ECTS i symulator</h2>
+        <p class="t-lead">Indeks liczy średnią zwykłą i ważoną punktami ECTS, z całych studiów albo z jednego semestru. W symulatorze zaznaczasz oceny, których się spodziewasz, i od razu widzisz nową średnią.</p>
+        <p>Cel, np. próg stypendium: ile potrzebujesz z pozostałych ECTS.</p>
+        <p>Oceny cząstkowe z kolokwiów nie zmieniają średniej.</p>
+      </div>
+      <div class="frame frame--split span-6 start-7" data-visual data-fx="gradient-mesh" data-fx-seed="7" data-fx-palette='{"bg":"#c6d3df","surface":"#d6e0e9","ink":"#25303a","accent":"#3f6a92"}' data-fx-params='{"speed":0,"tint":0.35,"relief":0.35,"softness":0.75,"calm":0.5,"calmX":0.45,"calmY":0.4}'>
+        <div class="stage stage--fade-b">
+          <div class="at-rise fit to-edge" style="--fit-max: 420px; --ax: max(24px, 50% - 210px); --ay: 52px; --ay-sm: 20px">
+            <div class="ui ui-ix ix ix-card" role="img" aria-label="Symulator średniej: Analiza matematyczna II, 7 ECTS, z wybraną oceną 4,5; Programowanie obiektowe i Algorytmy bez wybranej oceny; Bazy danych, 5 ECTS, z wybraną oceną 4.">
+              <p class="ix-h"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14v4M8 18h.01M12 18h.01"/></svg>Symulator średniej</p>
+              <p class="ix-sub" style="margin-top: .4em">Wybierz oceny, których się spodziewasz w tym semestrze:</p>
+              <div style="margin-top: .4em">
+                <div class="ix-sim__row"><div class="ix-sim__name"><span class="ix-dot" style="--c: var(--am)"></span><b>Analiza matematyczna II</b><span class="ix-faint">7 ECTS</span></div><div class="ix-grades"><span>2</span><span>3</span><span>3,5</span><span>4</span><span class="is-on">4,5</span><span>5</span></div></div>
+                <div class="ix-sim__row"><div class="ix-sim__name"><span class="ix-dot" style="--c: var(--po)"></span><b>Programowanie obiektowe</b><span class="ix-faint">6 ECTS</span></div><div class="ix-grades"><span>2</span><span>3</span><span>3,5</span><span>4</span><span>4,5</span><span>5</span></div></div>
+                <div class="ix-sim__row"><div class="ix-sim__name"><span class="ix-dot" style="--c: var(--aisd)"></span><b>Algorytmy i struktury danych</b><span class="ix-faint">6 ECTS</span></div><div class="ix-grades"><span>2</span><span>3</span><span>3,5</span><span>4</span><span>4,5</span><span>5</span></div></div>
+                <div class="ix-sim__row"><div class="ix-sim__name"><span class="ix-dot" style="--c: var(--bd)"></span><b>Bazy danych</b><span class="ix-faint">5 ECTS</span></div><div class="ix-grades"><span>2</span><span>3</span><span>3,5</span><span class="is-on">4</span><span>4,5</span><span>5</span></div></div>
+                <div class="ix-sim__row"><div class="ix-sim__name"><span class="ix-dot" style="--c: var(--fiz)"></span><b>Fizyka dla informatyków</b><span class="ix-faint">4 ECTS</span></div><div class="ix-grades"><span>2</span><span>3</span><span>3,5</span><span>4</span><span>4,5</span><span>5</span></div></div>
+                <div class="ix-sim__row"><div class="ix-sim__name"><span class="ix-dot" style="--c: var(--ang)"></span><b>Język angielski B2</b><span class="ix-faint">2 ECTS</span></div><div class="ix-grades"><span>2</span><span>3</span><span>3,5</span><span>4</span><span>4,5</span><span>5</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="at-over" style="--bx: max(24px, 50% - 210px); --by: 72px">
+            <div class="ui ui-ix ix ix-card ix-result" role="img" aria-label="Wynik: ten semestr 4,29, cały tok studiów 4,14, o 0,04 więcej. Aby mieć średnią 4,30, potrzeba średnio 4,85 z pozostałych 18 ECTS.">
+              <div class="ix-stats2">
+                <div><p class="ix-stat__label">Ten semestr</p><p class="ix-stat__value is-accent">4,29</p></div>
+                <div><p class="ix-stat__label">Cały tok studiów</p><p class="ix-stat__value">4,14<span class="ix-up">▲ 0,04</span></p></div>
+              </div>
+              <div class="ix-target" style="margin-top: .8em"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Cel (np. próg stypendium):<span class="ix-input">4,3</span></div>
+              <p class="ix-sub" style="margin-top: .6em">Aby mieć 4,30, potrzebujesz średnio 4,85 z pozostałych 18 ECTS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kalendarz" aria-labelledby="kalendarz-h" style="--hm: 2">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="kalendarz-h">Kalendarz akademicki z terminami. <span class="muted">Kolokwia i projekty obok świąt i dni rektorskich.</span></h2>
+      </div>
+      <div class="grid">
+        <article class="card card--row card--open span-4 m-nolift">
+          <h3>Liczy święta i dni wolne w kalendarzu</h3>
+          <p>Święta, także ruchome jak Wielkanoc, wylicza sam. Gotowe plany UŁ mają też dni rektorskie, przerwy i sesję.</p>
+          <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 380px; --ax: max(20px, 50% - 190px); --ay: 28px; --ay-sm: 16px">
+            <div class="ui ui-ix ix ix-card" role="img" aria-label="Listopad 2026: 1 listopada Wszystkich Świętych, 2 listopada dzień rektorski, 11 listopada Narodowe Święto Niepodległości, 12 listopada dziś, 13 listopada plan środowy, 18 listopada kolokwium, 20 listopada sprawozdanie.">
+              <div class="ix-head"><p class="ix-h">Listopad 2026</p><span class="ix-faint" aria-hidden="true">‹&nbsp;&nbsp;›</span></div>
+              <div class="ix-month" style="margin-top: .7em">
+                <span class="ix-wd">pn</span><span class="ix-wd">wt</span><span class="ix-wd">śr</span><span class="ix-wd">czw</span><span class="ix-wd">pt</span><span class="ix-wd">sob</span><span class="ix-wd">nd</span>
+                <span class="ix-cell is-other">26</span><span class="ix-cell is-other">27</span><span class="ix-cell is-other">28</span><span class="ix-cell is-other">29</span><span class="ix-cell is-other">30</span><span class="ix-cell is-other">31</span><span class="ix-cell is-off">1</span>
+                <span class="ix-cell is-off">2</span><span class="ix-cell">3</span><span class="ix-cell">4</span><span class="ix-cell">5</span><span class="ix-cell">6</span><span class="ix-cell">7</span><span class="ix-cell">8</span>
+                <span class="ix-cell">9</span><span class="ix-cell">10</span><span class="ix-cell is-off">11</span><span class="ix-cell is-today">12</span><span class="ix-cell">13<i style="--k: var(--ix-accent)"></i></span><span class="ix-cell">14</span><span class="ix-cell">15</span>
+                <span class="ix-cell">16</span><span class="ix-cell">17</span><span class="ix-cell">18<i style="--k: var(--kol)"></i></span><span class="ix-cell">19</span><span class="ix-cell">20<i style="--k: var(--zad)"></i></span><span class="ix-cell">21</span><span class="ix-cell">22</span>
+                <span class="ix-cell">23</span><span class="ix-cell">24</span><span class="ix-cell">25</span><span class="ix-cell">26</span><span class="ix-cell">27</span><span class="ix-cell">28</span><span class="ix-cell">29</span>
+              </div>
+              <div class="ix-legend" style="margin-top: .8em"><span style="--k: var(--kol)">Kolokwium</span><span style="--k: var(--zad)">Zadanie</span><span style="--k: var(--ix-success)">dzień wolny</span><span style="--k: var(--ix-accent)">plan środowy</span></div>
+            </div>
+          </div></div></div>
+        </article>
+        <article class="card card--row card--open span-4 m-nolift">
+          <h3>Przypomina dzień przed terminem</h3>
+          <p>Powiadomienie przychodzi dzień wcześniej i w dniu terminu, a także przy ważnym ogłoszeniu z wydziału.</p>
+          <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 360px; --ax: max(20px, 50% - 180px); --ay: 36px; --ay-sm: 20px">
+            <div class="ui ui-ix ix ix-stack" style="gap: .7em" role="img" aria-label="Trzy powiadomienia Indeksu: jutro kolokwium 2 z całek podwójnych o 8:30, nowe ogłoszenie o rejestracji żetonowej na seminaria, specjalności i moduły oraz dzisiejsze sprawozdanie z laboratorium baz danych o 12:15.">
+              <div class="ix-notif"><img loading="lazy" src="favicon.svg" alt="" width="34" height="34"><div><p class="ix-notif__app"><span>Indeks</span><span>teraz</span></p><p class="ix-notif__title">Jutro: Kolokwium 2 – całki podwójne</p><p class="ix-notif__body">Analiza matematyczna II · godz. 08:30</p></div></div>
+              <div class="ix-notif"><img loading="lazy" src="favicon.svg" alt="" width="34" height="34"><div><p class="ix-notif__app"><span>Indeks</span><span>8:05</span></p><p class="ix-notif__title">Nowe ogłoszenie</p><p class="ix-notif__body">Rejestracja żetonowa oraz rejestracje na seminaria, specjalności i moduły</p></div></div>
+              <div class="ix-notif"><img loading="lazy" src="favicon.svg" alt="" width="34" height="34"><div><p class="ix-notif__app"><span>Indeks</span><span>wczoraj</span></p><p class="ix-notif__title">Dziś: Sprawozdanie z laboratorium 4 (SQL – złączenia)</p><p class="ix-notif__body">Bazy danych · godz. 12:15</p></div></div>
+            </div>
+          </div></div></div>
+        </article>
+        <article class="card card--row card--open span-4 m-nolift">
+          <h3>Wysyła terminy do kalendarza</h3>
+          <p>Plik .ics otworzysz w Kalendarzu Google, Apple albo w Outlooku. Kolokwia i egzaminy mają przypomnienie dzień wcześniej.</p>
+          <div class="panel"><div class="dg" data-diagram='{"layout":"hub","alt":"Terminy z Indeksu trafiają w pliku .ics do Kalendarza Google, Kalendarza Apple i Outlooka.","center":{"label":"Plik .ics","icon":"ui:calendar-arrow-down"},"spokes":[{"label":"Kalendarz Google","icon":"google-calendar"},{"label":"Kalendarz Apple","icon":"apple"},{"label":"Outlook","icon":"assets/icons/outlook.svg"}]}'></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section g2m ground-inverse" id="telefon" data-moment="line-carries-colour" data-moment-opts='{"from":"base"}' aria-labelledby="telefon-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5 stack-5">
+        <div class="section-head">
+          <h2 id="telefon-h">Na telefonie Indeks sam zaznacza obecność</h2>
+          <p>Działa, gdy aplikacja jest otwarta: przeglądarka nie sprawdza lokalizacji w tle.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Indeks na telefonie">
+          <button class="tab" type="button" role="tab" id="tab-obecnosc" aria-selected="true" aria-controls="panel-obecnosc ekran-obecnosc">Obecność</button>
+          <button class="tab" type="button" role="tab" id="tab-ogloszenia" aria-selected="false" aria-controls="panel-ogloszenia ekran-ogloszenia">Ogłoszenia</button>
+          <button class="tab" type="button" role="tab" id="tab-konto" aria-selected="false" aria-controls="panel-konto ekran-konto">Konto</button>
+        </div>
+        <div class="tab-panels">
+          <div role="tabpanel" id="panel-obecnosc" aria-labelledby="tab-obecnosc"><p class="t-lead">W czasie zajęć telefon sprawdza, czy jesteś na wydziale swojego kierunku. Jeśli tak, zaznacza obecność, a jeśli nie, po 15 minutach nieobecność. Ręczna zmiana zawsze wygrywa.</p></div>
+          <div role="tabpanel" id="panel-ogloszenia" aria-labelledby="tab-ogloszenia" hidden><p class="t-lead">Aktualności ze Strefy Studenta Twojego wydziału i całej uczelni odświeżają się kilka razy dziennie. Dni wolne, odwołania, zapisy i sprawy USOS są wyróżnione.</p></div>
+          <div role="tabpanel" id="panel-konto" aria-labelledby="tab-konto" hidden><p class="t-lead">Z kontem plan, obecności, oceny i terminy są takie same na komputerze i telefonie. Bez internetu zmiany czekają i wysyłają się po powrocie łączności.</p></div>
+        </div>
+      </div>
+      <div class="frame frame--split frame--lit span-6 start-7">
+        <div class="stage stage--fade-b">
+          <div class="at-rise" id="ekran-obecnosc" style="--w: 280px; --ay: 96px; --ay-sm: 20px">
+            <div class="ui ui-ix ix ix-phone" role="img" aria-label="Indeks na telefonie w czwartek o 10:17: trwają Bazy danych w Auli A z zaznaczoną obecnością i komunikat: Jesteś na wydziale, więc zaznaczono obecność: Bazy danych.">
+              <div class="ix-phone__screen">
+                <div class="ix-phone__status"><b>10:17</b><span><i style="height: 5px"></i><i style="height: 7px"></i><i style="height: 9px"></i><i style="height: 11px"></i><em></em></span></div>
+                <div class="ix-phone__body">
+                  <p class="ix-hello">Dzień dobry. Czwartek, 12 listopada.</p>
+                  <p class="ix-title">Teraz: Bazy danych, Aula A.</p>
+                  <p class="ix-h2">Dziś</p>
+                  <div class="ix-block" style="--c: var(--bd); --bh: 6.6em"><span class="ix-status"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div class="ix-block__top"><span>Bazy danych</span><span>Aula A</span></div><div class="ix-block__meta"><span>10:15–11:45, Wykład</span><span class="ix-chip">trwa, koniec za 1 h 28 min</span></div></div>
+                  <div class="ix-gap">Okienko, 2 h 30 min</div>
+                </div>
+                <div class="ix-toast"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Jesteś na wydziale, więc zaznaczono obecność: Bazy danych.</div>
+              </div>
+            </div>
+          </div>
+          <div class="at-rise" id="ekran-ogloszenia" hidden style="--w: 280px; --ay: 96px; --ay-sm: 20px">
+            <div class="ui ui-ix ix ix-phone" role="img" aria-label="Karta Ogłoszenia na Pulpicie telefonu: trzy ważne ogłoszenia, o rejestracji żetonowej, o teście diagnostycznym i lektoratach oraz o przerwie w dostępie do USOSweb.">
+              <div class="ix-phone__screen">
+                <div class="ix-phone__status"><b>8:06</b><span><i style="height: 5px"></i><i style="height: 7px"></i><i style="height: 9px"></i><i style="height: 11px"></i><em></em></span></div>
+                <div class="ix-phone__body">
+                  <div class="ix-head"><p class="ix-h2">Ogłoszenia</p><span class="ix-link">Wszystkie</span></div>
+                  <div>
+                    <div class="ix-ann" style="--k: var(--ix-accent)"><span class="ix-ann__icon"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><div><b>Rejestracja żetonowa oraz rejestracje na seminaria, specjalności i moduły</b><p>2 lis</p></div><span class="ix-badge ix-badge--accent">Nowe</span></div>
+                    <div class="ix-ann" style="--k: var(--ix-accent)"><span class="ix-ann__icon"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><div><b>Test diagnostyczny i lektoraty językowe – ważne informacje dla studentów</b><p>30 paź</p></div><span></span></div>
+                    <div class="ix-ann" style="--k: var(--ix-accent)"><span class="ix-ann__icon"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><div><b>Czasowe ograniczenie dostępu do USOSweb i Portalu Pracowniczego</b><p>21 paź</p></div><span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="at-rise" id="ekran-konto" hidden style="--w: 280px; --ay: 96px; --ay-sm: 20px">
+            <div class="ui ui-ix ix ix-phone" role="img" aria-label="Ustawienia konta na telefonie: zsynchronizowano 2 minuty temu; plan, obecności, oceny i terminy są takie same na każdym urządzeniu z tym kontem.">
+              <div class="ix-phone__screen">
+                <div class="ix-phone__status"><b>21:40</b><span><i style="height: 5px"></i><i style="height: 7px"></i><i style="height: 9px"></i><i style="height: 11px"></i><em></em></span></div>
+                <div class="ix-phone__body">
+                  <p class="ix-title">Ustawienia</p>
+                  <div class="ix-acct">
+                    <p class="ix-h">Konto</p>
+                    <div class="ix-acct__row"><span class="ix-avatar">OK</span><span class="ix-synced"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><path d="m9.5 14 2 2 3.5-3.5"/></svg>Zsynchronizowano 2 minuty temu</span></div>
+                    <p class="ix-sub">Plan, obecności, oceny, terminy i ustawienia wyglądu są takie same na każdym urządzeniu z tym kontem.</p>
+                    <span class="ix-btn ix-btn--sm" style="justify-self: start">Wyloguj</span>
+                  </div>
+                  <div class="ix-acct">
+                    <p class="ix-h">Dane</p>
+                    <p class="ix-sub">Kopia zapasowa bez kluczy i tokenów.</p>
+                    <div class="ix-mark__btns"><span class="ix-btn ix-btn--sm">Eksportuj kopię</span><span class="ix-btn ix-btn--sm">Importuj</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="pytania-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head"><h2 id="pytania-h">Pytania o Indeks</h2></div>
+      </div>
+      <div class="faq span-6 start-7">
+        <div class="faq__item"><h3>Czy do Indeksu potrzebne jest konto?</h3><p>Nie. Bez konta wszystko zostaje na tym urządzeniu.</p></div>
+        <div class="faq__item"><h3>Czy Indeks pobiera plan z USOS?</h3><p>Jeszcze nie. Wybierasz gotowy plan kierunku UŁ albo dodajesz zajęcia ręcznie.</p></div>
+        <div class="faq__item"><h3>Czy aplikacja zapisuje, gdzie jestem?</h3><p>Nie. Lokalizacja zostaje w telefonie, a na konto trafia tylko status obecności.</p></div>
+        <div class="faq__item"><h3>Kto ma dostęp do danych w Indeksie?</h3><p>Konto widzi tylko jego właściciel. Dane nie są szyfrowane end-to-end, więc techniczny dostęp do bazy ma też jej administrator.</p></div>
+        <div class="faq__item"><h3>Ile kosztuje Indeks?</h3><p>Nic. Instalator, wersja w przeglądarce i konto są bezpłatne.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="wersje" aria-labelledby="wersje-h" style="--hm: 2">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="wersje-h">Wersje na Windows, przeglądarkę i iPhone’a. <span class="muted">Z kontem dane przechodzą między nimi same.</span></h2>
+      </div>
+      <div class="grid">
+        <a class="tile span-4" href="https://github.com/BoboToZiomal/indeks/releases/latest">
+          <div class="tile__media panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 380px; --ax: max(20px, 50% - 190px); --ay: 32px; --ay-sm: 16px">
+            <div class="ui ui-ix ix ix-win" role="img" aria-label="Okno Indeksu na Windows z przyciskiem: Nowa wersja 0.7.0, kliknij, by zainstalować.">
+              <div class="ix-win__bar"><img loading="lazy" src="favicon.svg" alt="" width="22" height="22"><b>Indeks</b><span class="ix-pill is-on">Pulpit</span><span class="ix-update"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span><strong>Nowa wersja 0.7.0</strong>kliknij, by zainstalować</span></span></div>
+              <div class="ix-win__body">
+                <div><p class="ix-hello">Dzień dobry. Czwartek, 12 listopada.</p><p class="ix-title">Za 25 min: Bazy danych, Aula A.</p></div>
+                <div class="ix-block" style="--c: var(--bd)"><div class="ix-block__top"><span>Bazy danych</span><span>Aula A</span></div><div class="ix-block__meta"><span>10:15–11:45, Wykład</span><span class="ix-chip">za 25 min</span></div></div>
+              </div>
+            </div>
+          </div></div></div>
+          <div class="tile__head"><h3><span class="ic-tile ic-tile--32"><img loading="lazy" class="ic" data-icon="windows" src="assets/icons/windows.svg" alt="" width="20" height="20"></span>Indeks na Windows</h3><span class="tile__price link">Pobierz instalator</span></div>
+          <p>Instalator, który aktualizuje się sam: sprawdza nowe wersje przy starcie i co 6 godzin.</p>
+        </a>
+        <a class="tile span-4" href="https://bobotoziomal.github.io/indeks/">
+          <div class="tile__media panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max: 380px; --ax: max(20px, 50% - 190px); --ay: 32px; --ay-sm: 16px">
+            <div class="ui ui-ix ix ix-win" role="img" aria-label="Indeks w przeglądarce: ekran powitalny z gotowymi planami dwóch kierunków Uniwersytetu Łódzkiego.">
+              <div class="ix-tabs"><span class="ix-dots"><i></i><i></i><i></i></span><span class="ix-tab"><img loading="lazy" src="favicon.svg" alt="" width="14" height="14">Indeks</span></div>
+              <div class="ix-welcome">
+                <img loading="lazy" src="favicon.svg" alt="" width="40" height="40">
+                <p class="ix-welcome__h">Twoje studia.<br><span>W jednym miejscu.</span></p>
+                <p class="ix-sub">Plan zajęć, frekwencja z planerem długich weekendów, terminy i oceny ze średnią.</p>
+                <div class="ix-options">
+                  <div class="ix-option"><b>Informacja w środowisku cyfrowym</b><span class="ix-sub">Uniwersytet Łódzki: II rok LIC, semestr zimowy 2026/27.</span></div>
+                  <div class="ix-option"><b>Ekonometria i analityka danych</b><span class="ix-sub">Uniwersytet Łódzki: II rok, semestr zimowy 2026/27.</span></div>
+                </div>
+              </div>
+            </div>
+          </div></div></div>
+          <div class="tile__head"><h3><span class="ic-tile ic-tile--32"><img loading="lazy" class="ic" data-icon="chrome" src="assets/icons/chrome.svg" alt="" width="20" height="20"></span>Indeks w przeglądarce</h3><span class="tile__price link">Otwórz Indeks</span></div>
+          <p>Bez instalacji, a po pierwszym otwarciu działa też bez internetu.</p>
+        </a>
+        <div class="tile span-4">
+          <div class="tile__media panel"><div class="stage stage--fade-b"><div class="at-rise" style="--w: 260px; --ay: 28px; --ay-sm: 16px">
+            <div class="ui ui-ix ix ix-phone" style="width: 260px; height: 520px" role="img" aria-label="Indeks w Safari na iPhonie z podpowiedzią: Dodaj Indeks do ekranu początkowego.">
+              <div class="ix-phone__screen">
+                <div class="ix-phone__status"><b>9:50</b><span><i style="height: 5px"></i><i style="height: 7px"></i><i style="height: 9px"></i><i style="height: 11px"></i><em></em></span></div>
+                <div class="ix-hint"><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg><span><strong>Dodaj Indeks do ekranu początkowego</strong>Stuknij <b>Udostępnij</b>, a potem <b>Do ekranu początkowego</b>. Aplikacja otworzy się na pełnym ekranie, zadziała bez internetu i będzie mogła wysyłać przypomnienia.</span><svg class="ix-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+                <div class="ix-phone__body"><p class="ix-hello">Dzień dobry. Czwartek, 12 listopada.</p><p class="ix-title">Za 25 min: Bazy danych, Aula A.</p></div>
+              </div>
+            </div>
+          </div></div></div>
+          <div class="tile__head"><h3><span class="ic-tile ic-tile--32"><img loading="lazy" class="ic ic-ink" data-icon="apple" src="assets/icons/apple.svg" alt="" width="20" height="20"></span>Indeks na iPhonie</h3></div>
+          <p>W Safari stuknij Udostępnij, a potem Do ekranu początkowego. Przypomnienia działają od iOS 16.4.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--statement" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Wpisz plan i zobacz swoje limity</h2>
+        <p>Dwa kierunki Uniwersytetu Łódzkiego mają gotowy plan na semestr zimowy 2026/27. Zajęcia innych kierunków dodasz ręcznie.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="https://bobotoziomal.github.io/indeks/">Otwórz Indeks<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><img loading="lazy" src="favicon.svg" alt="" width="28" height="28">Indeks</a>
+          <p class="footer__lede">Aplikacja dla studentów na Windows, telefon i przeglądarkę.</p>
+        </div>
+        <div class="span-2 start-7 footer__col"><h3>Funkcje</h3><ul><li><a href="#plan">Plan</a></li><li><a href="#frekwencja">Frekwencja</a></li><li><a href="#oceny">Oceny</a></li><li><a href="#kalendarz">Kalendarz</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Aplikacja</h3><ul><li><a href="#telefon">Telefon</a></li><li><a href="#wersje">Wersje</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Pomoc</h3><ul><li><a href="#faq">Pytania</a></li><li><a href="prywatnosc.html">Prywatność</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Indeks</span>
+        <span>Nazwy produktów i logo są znakami towarowymi ich właścicieli.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module">
+  // system.js names the menu sheet's expand buttons in English ("Show … links"); this page says it in Polish
+  document.querySelectorAll('.nav__expand').forEach((b) => {
+    const t = b.closest('.nav__item')?.querySelector('.nav__link')?.textContent.trim();
+    if (t) b.setAttribute('aria-label', `Rozwiń listę: ${t}`);
+  });
+</script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="assets/diagrams/mount.js"></script>
+</body>
+</html>

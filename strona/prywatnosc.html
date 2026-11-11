@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl" data-type="software" data-radius="round" data-buttons="tonal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indeks: prywatność i dane</title>
+<meta name="description" content="Gdzie Indeks zapisuje plan, obecności i oceny, co trafia na konto, a co zostaje w telefonie lub na komputerze.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://bobotoziomal.github.io/indeks/strona/prywatnosc.html">
+<meta name="theme-color" content="#f1f2f4">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<style>
+:root {
+  --p-bg: #f1f2f4; --p-surface: #e4e5e8; --p-ink: #14161c; --p-muted: #5e6065;
+  --p-accent: #2340e8; --p-accent-ink: #f1f2f4; --p-action: #2340e8; --p-action-ink: #f1f2f4;
+  --p-inv-bg: #14161c; --p-inv-surface: #202228; --p-inv-ink: #f1f2f4; --p-inv-muted: #94969a;
+  --p-inv-accent: #f1f2f4; --p-inv-accent-ink: #14161c; --p-inv-action: #f1f2f4; --p-inv-action-ink: #14161c;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-stretch: 96%;
+}
+/* a text page: one column of facts under the fixed header */
+.doc { padding: calc(var(--nav) + var(--s-9)) 0 var(--s-9); }
+.doc h1 { max-width: 16ch; }
+.doc .lede { margin-top: var(--s-5); font-size: var(--t-lead); max-width: 56ch; }
+.doc dl { margin: var(--s-8) 0 0; display: grid; max-width: 820px; }
+.doc dl > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--s-2) var(--s-6); padding: var(--s-5) 0; border-top: 1px solid var(--line); }
+.doc dt { font-weight: 500; }
+.doc dd { margin: 0; max-width: 60ch; }
+@media (max-width: 639px) { .doc dl > div { grid-template-columns: minmax(0, 1fr); } }
+.doc-foot { padding: var(--s-6) 0; border-top: 1px solid var(--line); font-size: var(--t-small); color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#tresc">Przejdź do treści</a>
+    <a class="nav__logo" href="index.html"><img src="favicon.svg" alt="" width="28" height="28">Indeks</a>
+    <div class="nav__actions" style="margin-left: auto">
+      <a class="btn btn--primary" href="https://bobotoziomal.github.io/indeks/">Otwórz Indeks</a>
+    </div>
+  </div>
+</header>
+
+<main id="tresc" class="doc">
+  <article class="wrap">
+    <h1>Prywatność i dane w Indeksie</h1>
+    <p class="lede">Co zostaje na Twoim urządzeniu, co trafia na konto i kto ma do tego dostęp.</p>
+    <dl>
+      <div><dt>Bez konta</dt><dd>Plan, obecności, oceny i terminy zostają na tym urządzeniu: w aplikacji na Windows, w przeglądarce albo na telefonie. Kopię zapasową bez kluczy i tokenów zrobisz w Ustawieniach, w części Dane.</dd></div>
+      <div><dt>Z kontem</dt><dd>Konto (e-mail i hasło) działa na Firebase od Google. Każda osoba ma własne rekordy, a reguły bazy dają do nich dostęp wyłącznie ich właścicielowi. Synchronizują się plan, obecności, oceny, terminy, semestry i ustawienia wyglądu.</dd></div>
+      <div><dt>Kto jeszcze ma dostęp</dt><dd>Dane nie są szyfrowane end-to-end, więc administrator projektu Firebase ma do bazy techniczny dostęp. Aplikacja mówi o tym przy zakładaniu konta.</dd></div>
+      <div><dt>Lokalizacja</dt><dd>Automatyczna obecność działa tylko na telefonie, w czasie zajęć i gdy aplikacja jest otwarta. Współrzędne są w pamięci tylko na czas jednego sprawdzenia: nie są zapisywane ani wysyłane. Na konto trafia sam status, obecność albo nieobecność.</dd></div>
+      <div><dt>Ogłoszenia</dt><dd>Pochodzą z publicznych stron wydziałów. To, które ogłoszenia już przeczytano, zostaje na urządzeniu.</dd></div>
+      <div><dt>Wylogowanie</dt><dd>Czyści dane z urządzenia, także klucze. Dane innej osoby nigdy nie dołączają się do konta bez pytania.</dd></div>
+      <div><dt>Usunięcie konta</dt><dd>W Ustawieniach, w części Konto. Znika konto i wszystkie jego rekordy, a pozostałe urządzenia wylogowują się same.</dd></div>
+      <div><dt>Aktualizacje na Windows</dt><dd>Zainstalowana aplikacja sprawdza nowe wersje w GitHub Releases przy starcie i co 6 godzin, a pobiera je w tle.</dd></div>
+    </dl>
+  </article>
+</main>
+
+<footer class="doc-foot">
+  <div class="wrap">© 2026 Indeks · <a class="link" href="index.html">Strona główna</a></div>
+</footer>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+</body>
+</html>
