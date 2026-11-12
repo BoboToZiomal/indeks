@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T13:35:25.319Z",
+  "updatedAt": "2026-11-12T13:52:02.454Z",
   "items": [
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
@@ -13,6 +13,66 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "zmiana-organizacji-zajec-13-listopada-2026-r",
+      "title": "Zmiana organizacji zajęć 13 listopada 2026 r. ⚠️",
+      "excerpt": "W piątek 13 listopada 2026 r. zajęcia dydaktyczne będą odbywać się zgodnie ze środowym planem zajęć.",
+      "date": "2026-11-13",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/zmiana-organizacji-zajec-13-listopada-2026-r",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-12T13:52:02.437Z"
+    },
+    {
+      "id": "rekrutacja-na-wymiane-do-international-black-sea-university-ibsu-w-gruzji",
+      "title": "Rekrutacja na wymianę do International Black Sea University (IBSU) w Gruzji",
+      "excerpt": "Zapraszamy osoby studiujące na Wydziale Ekonomiczno-Socjologicznym UŁ (studia I i II stopnia) do udziału w rekrutacji na wymianę do International Black Sea University (IBSU) w Gruzji w semestrze…",
+      "date": "2026-11-12",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/rekrutacja-na-wymiane-do-international-black-sea-university-ibsu-w-gruzji",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-12T13:52:02.437Z"
+    },
+    {
+      "id": "skn-forecast-na-podium-targow-kol-naukowych",
+      "title": "SKN Forecast na podium Targów Kół Naukowych",
+      "excerpt": "Podczas tegorocznych Targów Kół Naukowych, działające na naszym Wydziale Studenckie Koło Naukowe „Forecast” stanęło na podium. Projekt studentów – „Wielka Gra Ekonomiczna” – zajął 2. miejsce w…",
+      "date": "2026-11-12",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/skn-forecast-na-podium-targow-kol-naukowych",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-12T13:52:02.437Z"
+    },
+    {
+      "id": "spooky-game-party-w-palacu-biedermanna",
+      "title": "Spooky Game Party w Pałacu Biedermanna",
+      "excerpt": "Na Uniwersytecie Łódzkim doceniamy studencką aktywność i wspieramy działania, które pozwalają rozwijać pasje, dzielić się wiedzą oraz popularyzować naukę poza murami uczelni. Jednym z takich…",
+      "date": "2026-11-12",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/spooky-game-party-w-palacu-biedermanna",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-12T13:52:02.437Z"
+    },
+    {
+      "id": "uczta-starozytny-traktat-o-milosci-zapraszamy-na-wyklad",
+      "title": "Uczta: starożytny traktat o miłości. Wykład z cyklu „Poszukiwania”",
+      "excerpt": "Zapraszamy na drugi, w tym roku akademickim, wykład z cyklu „Poszukiwania” o odbędzie się w 12 listopada (czwartek) o godz. 18:00 w sali 0.43 na Wydziale Filologicznym UŁ. Współorganizatorem cyklu są…",
+      "date": "2026-11-12",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/uczta-starozytny-traktat-o-milosci-zapraszamy-na-wyklad",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
     },
     {
       "id": "kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
@@ -38,6 +98,18 @@
         "filolog"
       ],
       "firstSeen": "2026-11-10T13:35:25.306Z"
+    },
+    {
+      "id": "unilodz-dla-wosp-nasze-2-studencie-sztaby-znow-zagraja-dolacz-do-nich",
+      "title": "UniLodz dla WOŚP! Nasze 2 studenckie sztaby znów zagrają. Dołącz do nich!",
+      "excerpt": "Już 31 stycznia odbędzie się 35. Finał Wielkiej Orkiestry Świątecznej Pomocy. Tym razem zagramy na neonatologię pod hasłem „Dzisiaj?! Zdrowie noworodka najważniejsze!”. Ponownie na Uniwersytecie…",
+      "date": "2026-11-10",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/unilodz-dla-wosp-nasze-2-studencie-sztaby-znow-zagraja-dolacz-do-nich",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-12T13:52:02.437Z"
     },
     {
       "id": "default-3bf945bde0e4667d52b75153b95e066b",
@@ -83,7 +155,8 @@
       "category": "Uniwersytet",
       "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/innovation-hack-budujemybezpiecznejutro",
       "faculties": [
-        "eksoc"
+        "eksoc",
+        "filolog"
       ],
       "firstSeen": "2026-11-09T14:00:36.152Z"
     },
@@ -110,18 +183,6 @@
         "eksoc"
       ],
       "firstSeen": "2026-11-09T23:28:21.104Z"
-    },
-    {
-      "id": "uczta-starozytny-traktat-o-milosci-zapraszamy-na-wyklad",
-      "title": "„Uczta: starożytny traktat o miłości”. Zapraszamy na wykład",
-      "excerpt": "Zapraszamy na drugi, w tym roku akademickim, wykład z cyklu „Poszukiwania” o odbędzie się w 12 listopada (czwartek) o godz. 18:00 w sali 0.43 na Wydziale Filologicznym UŁ. Współorganizatorem cyklu są…",
-      "date": "2026-11-09",
-      "category": "Wydział Filologiczny",
-      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/uczta-starozytny-traktat-o-milosci-zapraszamy-na-wyklad",
-      "faculties": [
-        "filolog"
-      ],
-      "firstSeen": "2026-11-09T14:00:36.152Z"
     },
     {
       "id": "gis-arena",
@@ -195,6 +256,18 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "23-zgloszone-spoleczne-wyzwania-12-wybranych-do-dalszych-prac-science-hub-ul-wchodzi-w-kolejny-etap",
+      "title": "23 zgłoszone społeczne wyzwania, 12 wybranych do dalszych prac. Science Hub UŁ wchodzi w kolejny etap",
+      "excerpt": "Jak zwiększać dostępność? Jak skuteczniej angażować mieszkańców w życie społeczne i kulturalne? Jak odpowiadać na zmieniające się potrzeby rynku pracy i wspierać rozwój lokalnych społeczności? Teraz…",
+      "date": "2026-11-03",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/23-zgloszone-spoleczne-wyzwania-12-wybranych-do-dalszych-prac-science-hub-ul-wchodzi-w-kolejny-etap",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-12T13:52:02.437Z"
     },
     {
       "id": "mgr-inz-prof-dr-hab-facetka-od-nauki",
