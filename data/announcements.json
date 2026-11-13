@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T13:52:02.454Z",
+  "updatedAt": "2026-11-13T13:13:51.216Z",
   "items": [
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
@@ -15,6 +15,18 @@
       "firstSeen": "2026-11-06T09:06:41.435Z"
     },
     {
+      "id": "uwaga-awaria-uslug-microsoft-mozliwe-problemy-z-dostepem-takze-w-uniwersytecie-lodzkim",
+      "title": "Uwaga! Globalna awaria usług Microsoft – możliwe problemy z dostępem także w Uniwersytecie Łódzkim",
+      "excerpt": "Od kilkunastu godzin trwa awaria usług Microsoft, która może powodować problemy z dostępem do części narzędzi Microsoft 365, m.in. Outlooka, Teams czy SharePointa, używanych także w Uniwersytecie…",
+      "date": "2026-11-13",
+      "category": "Uniwersytet",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/uwaga-awaria-uslug-microsoft-mozliwe-problemy-z-dostepem-takze-w-uniwersytecie-lodzkim",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-13T13:13:51.191Z"
+    },
+    {
       "id": "zmiana-organizacji-zajec-13-listopada-2026-r",
       "title": "Zmiana organizacji zajęć 13 listopada 2026 r. ⚠️",
       "excerpt": "W piątek 13 listopada 2026 r. zajęcia dydaktyczne będą odbywać się zgodnie ze środowym planem zajęć.",
@@ -25,6 +37,18 @@
         "filolog"
       ],
       "firstSeen": "2026-11-12T13:52:02.437Z"
+    },
+    {
+      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-gosc-na-gwiazdke-2026",
+      "title": "10 lat spotkań, które zostają z nami na dłużej: Gość na Gwiazdkę 2026",
+      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
+      "date": "2026-11-12",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-gosc-na-gwiazdke-2026",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-13T13:13:51.191Z"
     },
     {
       "id": "rekrutacja-na-wymiane-do-international-black-sea-university-ibsu-w-gruzji",
