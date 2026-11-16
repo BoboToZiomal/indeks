@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T13:13:51.216Z",
+  "updatedAt": "2026-11-16T13:46:49.582Z",
   "items": [
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
@@ -13,6 +13,66 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
+      "title": "Kultura na UŁ? Nie wróżymy z fusów. Pytamy Was!",
+      "excerpt": "Koncerty, wystawy, warsztaty, kino, a może coś, na co jeszcze nikt nie wpadł? Co sprawia, że chcecie angażować się w życie kulturalne uczelni, a czego Wam w nim brakuje? Chcemy poznać Wasze zdanie!…",
+      "date": "2026-11-16",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "obchodzy-100-lecia-ekonometrii-na-eksocu",
+      "title": "Obchody 100-lecia ekonometrii na EkSocu",
+      "excerpt": "Czy na podstawie danych możemy przewidywać przyszłość? Co łączy ekonomię, matematykę i statystykę? Jak dzięki liczbom lepiej zrozumieć otaczający nas świat? Na te i wiele innych pytań od 100 lat…",
+      "date": "2026-11-16",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/obchodzy-100-lecia-ekonometrii-na-eksocu",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-16T13:46:49.567Z"
+    },
+    {
+      "id": "teatr-powszechny-w-lodzi-zaprasza-studentow-do-odbycia-praktyk",
+      "title": "Teatr Powszechny w Łodzi zaprasza studentów do odbycia praktyk",
+      "excerpt": "Teatr Powszechny w Łodzi poszukuje młodych, kreatywnych i dynamicznych osób, które interesują się komunikacją, promocją i nowymi mediami, a także na bieżąco śledzą trendy w mediach społecznościowych…",
+      "date": "2026-11-16",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/teatr-powszechny-w-lodzi-zaprasza-studentow-do-odbycia-praktyk",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-16T13:46:49.567Z"
+    },
+    {
+      "id": "40-lat-erasmus-opowiedz-swoja-historie-i-swietuj-razem-z-nami",
+      "title": "40 lat Erasmus+! Opowiedz swoją historię i świętuj razem z nami!",
+      "excerpt": "Czy wiesz, że studiując lub pracując na Uniwersytecie Łódzkim, możesz skorzystać z możliwości, jakie daje program Erasmus+? Dzięki niemu studenci UŁ mogą wyjechać na część studiów do jednej z…",
+      "date": "2026-11-13",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/40-lat-erasmus-opowiedz-swoja-historie-i-swietuj-razem-z-nami",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-16T13:46:49.567Z"
+    },
+    {
+      "id": "poszerz-horyzonty-i-poznaj-nowe-mozliwosci-dolacz-do-kongresu-kwanty-gospodarki",
+      "title": "Poszerz horyzonty i poznaj nowe możliwości – dołącz do Kongresu Kwanty Gospodarki!",
+      "excerpt": "Jak nowe technologie wpływają na gospodarkę? Jakie kompetencje będą ważne na rynku pracy i z jakimi wyzwaniami mierzą się współczesny biznes oraz nauka? Między innymi te zagadnienia zostaną poruszone…",
+      "date": "2026-11-13",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/poszerz-horyzonty-i-poznaj-nowe-mozliwosci-dolacz-do-kongresu-kwanty-gospodarki",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-16T13:46:49.567Z"
     },
     {
       "id": "uwaga-awaria-uslug-microsoft-mozliwe-problemy-z-dostepem-takze-w-uniwersytecie-lodzkim",
@@ -97,18 +157,6 @@
         "filolog"
       ],
       "firstSeen": "2026-11-09T14:00:36.152Z"
-    },
-    {
-      "id": "kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
-      "title": "Kultura na UŁ? Nie wróżymy z fusów. Pytamy Was!",
-      "excerpt": "Koncerty, wystawy, warsztaty, kino, a może coś, na co jeszcze nikt nie wpadł? Co sprawia, że chcecie angażować się w życie kulturalne uczelni, a czego Wam w nim brakuje? Chcemy poznać Wasze zdanie!…",
-      "date": "2026-11-10",
-      "category": "Uniwersytet",
-      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
-      "faculties": [
-        "filolog"
-      ],
-      "firstSeen": "2026-11-06T09:06:41.435Z"
     },
     {
       "id": "rusza-rekrutacja-na-oboz-narciarski-w-krynicy-zdroju-6-13-lutego-2027",
