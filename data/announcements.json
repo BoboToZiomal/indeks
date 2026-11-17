@@ -1,7 +1,31 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T13:46:49.582Z",
+  "updatedAt": "2026-11-17T14:38:32.371Z",
   "items": [
+    {
+      "id": "lodzka-premiera-na-filologu-kolo-naukowe-filmoznawcow-ul-zaprasza-na-seans-filmu-hedera-helix",
+      "title": "Łódzka premiera na Filologu. Koło Naukowe Filmoznawców UŁ zaprasza na seans filmu „Hedera helix”",
+      "excerpt": "24 listopada o godzinie 17:10 na auli A3 na Wydziale Filologicznym odbędzie się łódzka premiera filmu \"Hedera helix\" w reżyserii Adriana Michalskiego - studenta III roku filmoznawstwa i wiedzy o…",
+      "date": "2026-11-24",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/lodzka-premiera-na-filologu-kolo-naukowe-filmoznawcow-ul-zaprasza-na-seans-filmu-hedera-helix",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "ambasador",
+      "title": "Zostań twarzą Wydziału Filologicznego UŁ! Wystartowała rekrutacja do Programu Ambasadorskiego",
+      "excerpt": "Chcesz zdobyć pierwsze doświadczenia w świecie PR-u, marketingu i organizacji eventów, a przy okazji pokazać innym, jak się u nas studiuje? Poszukujemy kreatywnych osób, które dołączą do Programu…",
+      "date": "2026-11-23",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/ambasador",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
       "title": "Czasem wystarczy jeden ślad, żeby odkryć prawdę. Koło Naukowe SKN LingBoat zaprasza na spotkanie",
@@ -13,6 +37,54 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
+    },
+    {
+      "id": "level-up-kompetencyjny-upgrade-dla-studentow-ek-soc-4-dniowe-szkolenia-dofinansowane-ze-srodkow-efs-plus-128-i-9-grudnia-2026",
+      "title": "LEVEL UP! Kompetencyjny Upgrade dla studentów Ek-Soc - 4-dniowe szkolenia dofinansowane ze środków EFS Plus - 1,2,8 i 9 grudnia 2026",
+      "excerpt": "Co zyskasz dzięki udziałowi? Asertywność na co dzień – nauczysz się jasno komunikować swoje potrzeby, z szacunkiem stawiać granice w pracy, na uczelni lub w życiu codziennym bez poczucia…",
+      "date": "2026-11-17",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/level-up-kompetencyjny-upgrade-dla-studentow-ek-soc-4-dniowe-szkolenia-dofinansowane-ze-srodkow-efs-plus-128-i-9-grudnia-2026",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "mbank-zaprasza-studentow-i-studentki-do-sztabu-wosp",
+      "title": "mBank zaprasza studentów i studentki do sztabu WOŚP",
+      "excerpt": "mBank, jak co roku, w swojej siedzibie w Łodzi przy ul. Kilińskiego 74 organizuje sztab WOŚP. Bank zaprasza do swojego sztabu studentów i studentki EkSocu. Jeśli ktoś byłby zainteresowany byciem…",
+      "date": "2026-11-17",
+      "category": "Uniwersytet",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/mbank-zaprasza-studentow-i-studentki-do-sztabu-wosp",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "zloto-dla-uniwersytetu-lodzkiego-sukces-naszej-druzyny-w-integracyjnych-mistrzostwach-polski-azs-w-siatkowce-na-siedzaco",
+      "title": "Złoto dla Uniwersytetu Łódzkiego! Sukces naszej drużyny w Integracyjnych Mistrzostwach Polski AZS w siatkówce na siedząco",
+      "excerpt": "Zwycięstwo jest efektem zaangażowania całej drużyny, wspólnej pracy i pasji do sportu. Wielkie gratulacje dla całego zespołu!",
+      "date": "2026-11-17",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/zloto-dla-uniwersytetu-lodzkiego-sukces-naszej-druzyny-w-integracyjnych-mistrzostwach-polski-azs-w-siatkowce-na-siedzaco",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "gis-arena",
+      "title": "GIS Arena",
+      "excerpt": "Studenckie Koło Naukowe Geoinformacji UŁ PIKSEL oraz Studenckie Koło Naukowe Gospodarki Przestrzennej UŁ SPATIUM zapraszają na GIS Arenę - turniej organizowany z okazji GIS Day 2026. Wydarzenie…",
+      "date": "2026-11-16",
+      "category": "Wydział Nauk Geograficznych",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/gis-arena",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
     },
     {
       "id": "kultura-na-ul-nie-wrozymy-z-fusow-pytamy-was",
@@ -255,18 +327,6 @@
         "eksoc"
       ],
       "firstSeen": "2026-11-09T23:28:21.104Z"
-    },
-    {
-      "id": "gis-arena",
-      "title": "GIS Arena",
-      "excerpt": "Studenckie Koło Naukowe Geoinformacji UŁ PIKSEL oraz Studenckie Koło Naukowe Gospodarki Przestrzennej UŁ SPATIUM zapraszają na GIS Arenę - turniej organizowany z okazji GIS Day 2026. Wydarzenie…",
-      "date": "2026-11-06",
-      "category": "Wydział Nauk Geograficznych",
-      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/gis-arena",
-      "faculties": [
-        "eksoc"
-      ],
-      "firstSeen": "2026-11-09T14:00:36.152Z"
     },
     {
       "id": "collabothon-2026-hackathon-organizowany-przez-commerzbank-digital-technology-centre-poland",
