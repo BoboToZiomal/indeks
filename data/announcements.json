@@ -1,7 +1,19 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T14:38:32.371Z",
+  "updatedAt": "2026-11-18T14:14:32.643Z",
   "items": [
+    {
+      "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
+      "title": "Czy szkolny teatr może osiągnąć poziom profesjonalnej sztuki? Spektakl i spotkanie z Teatrem „Na drabinie”",
+      "excerpt": "27 listopada o godz. 15:00 w sali teatralnej (-12) na Wydziale Filologicznym odbędzie się wyjątkowe spotkanie z Teatrem „Na drabinie” i spektaklem „Z niewinności”, który zdobył II miejsce podczas…",
+      "date": "2026-11-27",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-18T14:14:32.515Z"
+    },
     {
       "id": "lodzka-premiera-na-filologu-kolo-naukowe-filmoznawcow-ul-zaprasza-na-seans-filmu-hedera-helix",
       "title": "Łódzka premiera na Filologu. Koło Naukowe Filmoznawców UŁ zaprasza na seans filmu „Hedera helix”",
