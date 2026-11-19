@@ -1,6 +1,6 @@
 // Wygenerowane przy budowaniu (vite.config.ts) – nie edytuj ręcznie.
-const CACHE = "indeks-0.8.0-6ae6be6f";
-const ASSETS = ["./index.html","./assets/index-CJIAAqRF.js","./assets/ai-cZzmNNpZ.js","./assets/error-BTdmRKoB.js","./assets/firebase-CviQ2fFk.js","./assets/node.browser-CKWkpoU6.js","./assets/node.browser-HQ5SKBOf.js","./assets/bricolage-grotesque-latin-ext-standard-normal-qp-RdZgh.woff2","./assets/bricolage-grotesque-latin-standard-normal-C5Lc8Qmc.woff2","./assets/bricolage-grotesque-vietnamese-standard-normal-Br4FGdAc.woff2","./assets/figtree-latin-ext-wght-normal-DCwSJGxG.woff2","./assets/figtree-latin-wght-normal-D_ZTVpCC.woff2","./assets/index-By-95BJH.css","./apple-touch-icon.png","./favicon.svg","./icon-192.png","./icon-512.png","./icon-maskable-512.png","./manifest.webmanifest"];
+const CACHE = "indeks-0.9.0-56d2e4b8";
+const ASSETS = ["./index.html","./assets/index-BiTr9O1e.js","./assets/ai-B27rPZuV.js","./assets/error-BTdmRKoB.js","./assets/firebase-DtbfGOf4.js","./assets/node.browser-HQ5SKBOf.js","./assets/node.browser-RZa925O0.js","./assets/index-D9epbIdn.css","./assets/public-sans-latin-ext-wght-normal-MQgHevqp.woff2","./assets/public-sans-latin-wght-normal-DdeTHZLK.woff2","./assets/public-sans-vietnamese-wght-normal-CtlIRbEm.woff2","./apple-touch-icon.png","./favicon.svg","./icon-192.png","./icon-512.png","./icon-maskable-512.png","./manifest.webmanifest"];
 const INDEX = new URL("./index.html", self.registration.scope).href;
 // Strona główna Indeksu (strona/, scripts/deploy-site.mjs) leży w zasięgu workera, ale nie jest aplikacją: jej adresy
 // idą zawsze prosto do sieci. Starsze workery podawały w jej miejscu aplikację, która pod strona/ wczytuje się pusta.
