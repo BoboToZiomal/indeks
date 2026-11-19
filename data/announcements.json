@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18T14:14:32.643Z",
+  "updatedAt": "2026-11-19T14:30:19.356Z",
   "items": [
     {
       "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
@@ -37,6 +37,55 @@
         "filolog"
       ],
       "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "agencja-wywiadu-na-wydziale-filologicznym-ul-studenci-poznali-mozliwosci-pracy-w-sluzbach-specjalnych",
+      "title": "Agencja Wywiadu na Wydziale Filologicznym UŁ. Studenci poznali możliwości pracy w służbach specjalnych",
+      "excerpt": "19 listopada w sali 27 Wydziału Filologicznego Uniwersytetu Łódzkiego odbyło się spotkanie z przedstawicielami Agencji Wywiadu. Trwająca blisko 2 godziny dyskusja przyciągnęła studentów…",
+      "date": "2026-11-19",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/agencja-wywiadu-na-wydziale-filologicznym-ul-studenci-poznali-mozliwosci-pracy-w-sluzbach-specjalnych",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-19T14:30:19.343Z"
+    },
+    {
+      "id": "innovation-hack-budujemybezpiecznejutro",
+      "title": "Innovation Hack: #BudujemyBezpieczneJutro – Cementownia Warta S.A. – dołącz do hackathonu",
+      "excerpt": "Cementownia Warta S.A. zaprasza studentów i doktorantów dowolnego kierunku na Innovation Hack: #BudujemyBezpieczneJutro – dwudniowy hackathon, podczas którego uczestnicy zmierzą się z rzeczywistymi…",
+      "date": "2026-11-19",
+      "category": "Uniwersytet",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/innovation-hack-budujemybezpiecznejutro",
+      "faculties": [
+        "eksoc",
+        "filolog"
+      ],
+      "firstSeen": "2026-11-09T14:00:36.152Z"
+    },
+    {
+      "id": "wypelnij-ankiety-usos-oceniajace-zajecia-z-semestru-zimowego-2026-2027",
+      "title": "Wypełnij ankiety USOS oceniające zajęcia z semestru zimowego 2026/2027",
+      "excerpt": "Jak co semestr zachęcamy osoby studiujące na EkSocu do wypełnienia ankiet oceny zajęć dydaktycznych na Wydziale Ekonomiczno-Socjologicznym. Studencka ocena zajęć dokonywana jest dwa razy w roku, za…",
+      "date": "2026-11-19",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/wypelnij-ankiety-usos-oceniajace-zajecia-z-semestru-zimowego-2026-2027",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-19T14:30:19.343Z"
+    },
+    {
+      "id": "studenci-wspoltworza-przyszlosc-unic-spotkanie-student-board-w-zagrzebiu",
+      "title": "Studenci współtworzą przyszłość UNIC. Spotkanie Student Board w Zagrzebiu",
+      "excerpt": "Jak zwiększyć zaangażowanie studentów w międzynarodowe inicjatywy? Jak sprawić, by możliwości oferowane przez europejski sojusz UNIC docierały do jeszcze większej liczby osób? Nad tymi i innymi…",
+      "date": "2026-11-18",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/studenci-wspoltworza-przyszlosc-unic-spotkanie-student-board-w-zagrzebiu",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-19T14:30:19.343Z"
     },
     {
       "id": "czasem-wystarczy-jeden-slad-zeby-odkryc-prawde-kolo-naukowe-skn-lingboat-zaprasza-na-spotkanie",
@@ -300,19 +349,6 @@
       "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/gospodarka-cyrkularna-wymiana-ubran-na-eksocu",
       "faculties": [
         "eksoc"
-      ],
-      "firstSeen": "2026-11-09T14:00:36.152Z"
-    },
-    {
-      "id": "innovation-hack-budujemybezpiecznejutro",
-      "title": "Innovation Hack: #BudujemyBezpieczneJutro - Cementownia Warta S.A. - dołącz do hackathonu",
-      "excerpt": "Cementownia Warta S.A. zaprasza studentów i doktorantów dowolnego kierunku na Innovation Hack: #BudujemyBezpieczneJutro – dwudniowy hackathon, podczas którego uczestnicy zmierzą się z rzeczywistymi…",
-      "date": "2026-11-09",
-      "category": "Uniwersytet",
-      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/innovation-hack-budujemybezpiecznejutro",
-      "faculties": [
-        "eksoc",
-        "filolog"
       ],
       "firstSeen": "2026-11-09T14:00:36.152Z"
     },
