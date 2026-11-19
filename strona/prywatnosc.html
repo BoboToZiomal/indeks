@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl" data-type="software" data-radius="round" data-buttons="tonal">
+<html lang="pl" data-type="software" data-radius="sharp" data-buttons="tonal">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,26 +7,37 @@
 <meta name="description" content="Gdzie Indeks zapisuje plan, obecności i oceny, co trafia na konto, a co zostaje w telefonie lub na komputerze.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://bobotoziomal.github.io/indeks/strona/prywatnosc.html">
-<meta name="theme-color" content="#f1f2f4">
+<meta name="theme-color" content="#f6f7f9">
 <meta name="site-kind" content="software">
 <meta name="page-type" content="software">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:wght@400..600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/system.css">
 <link rel="stylesheet" href="assets/motion/motion.css">
 <style>
+/* the same face and palette as index.html: Public Sans from fonts/, the dashes from a declaration of their own */
+@font-face { font-family: "Public Sans Variable"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("fonts/public-sans-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Public Sans Variable"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("fonts/public-sans-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Public Sans Dash"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("fonts/public-sans-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+2013-2014; }
 :root {
-  --p-bg: #f1f2f4; --p-surface: #e4e5e8; --p-ink: #14161c; --p-muted: #5e6065;
-  --p-accent: #2340e8; --p-accent-ink: #f1f2f4; --p-action: #2340e8; --p-action-ink: #f1f2f4;
-  --p-inv-bg: #14161c; --p-inv-surface: #202228; --p-inv-ink: #f1f2f4; --p-inv-muted: #94969a;
-  --p-inv-accent: #f1f2f4; --p-inv-accent-ink: #14161c; --p-inv-action: #f1f2f4; --p-inv-action-ink: #14161c;
-  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
-  --font-text: "Figtree", system-ui, sans-serif;
-  --display-weight: 400;
-  --display-tracking: -0.03em;
-  --display-stretch: 96%;
+  --p-bg: #f6f7f9; --p-surface: #e9eaed; --p-ink: #151922; --p-muted: #5c6474;
+  --p-accent: #152b4b; --p-accent-ink: #ffffff; --p-action: #152b4b; --p-action-ink: #ffffff;
+  --p-inv-bg: #152b4b; --p-inv-surface: #22385a; --p-inv-ink: #eef1f7; --p-inv-muted: #b4bdcb;
+  --p-inv-accent: #eef1f7; --p-inv-accent-ink: #152b4b; --p-inv-action: #eef1f7; --p-inv-action-ink: #152b4b;
+  --font-display: "Public Sans Dash", "Public Sans Variable", "Segoe UI", system-ui, sans-serif;
+  --font-text: "Public Sans Dash", "Public Sans Variable", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Public Sans Dash", "Public Sans Variable", "Segoe UI", system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.025em;
+  --display-stretch: 100%;
 }
+html[data-radius="sharp"] { --r-sm: 6px; --r-md: 6px; --r-lg: 10px; --r-btn: 6px; }
+.nav__logo { font-weight: 700; font-size: 20px; }
 /* a text page: one column of facts under the fixed header */
 .doc { padding: calc(var(--nav) + var(--s-9)) 0 var(--s-9); }
 .doc h1 { max-width: 16ch; }
