@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-19T14:30:19.356Z",
+  "updatedAt": "2026-11-20T14:08:16.425Z",
   "items": [
     {
       "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
@@ -37,6 +37,18 @@
         "filolog"
       ],
       "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "ii-miejsce-wydzialu-ekonomiczno-socjologicznego-ul-w-konkursie-wydzial-przyjazny-dla-kazdego",
+      "title": "II miejsce Wydziału Ekonomiczno-Socjologicznego UŁ w konkursie „Wydział przyjazny dla każdego”",
+      "excerpt": "W środę 18.11.2026 na ręce prodziekana ds. studenckich dr hab. Tomasza Uryszka, prof. UŁ oraz dr Joanny Sztobryn-Giercuszkiewicz - pełnomocniczki dziekana ds. osób ze szczególnymi potrzebami wręczona…",
+      "date": "2026-11-20",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/ii-miejsce-wydzialu-ekonomiczno-socjologicznego-ul-w-konkursie-wydzial-przyjazny-dla-kazdego",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-20T14:08:16.405Z"
     },
     {
       "id": "agencja-wywiadu-na-wydziale-filologicznym-ul-studenci-poznali-mozliwosci-pracy-w-sluzbach-specjalnych",
