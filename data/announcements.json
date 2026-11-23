@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T14:08:16.425Z",
+  "updatedAt": "2026-11-23T16:08:46.564Z",
   "items": [
     {
       "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
@@ -15,6 +15,18 @@
       "firstSeen": "2026-11-18T14:14:32.515Z"
     },
     {
+      "id": "ambasador",
+      "title": "Zostań twarzą Wydziału Filologicznego UŁ! Wystartowała rekrutacja do Programu Ambasadorskiego",
+      "excerpt": "Chcesz zdobyć pierwsze doświadczenia w świecie PR-u, marketingu i organizacji eventów, a przy okazji pokazać innym, jak się u nas studiuje? Poszukujemy kreatywnych osób, które dołączą do Programu…",
+      "date": "2026-11-24",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/ambasador",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
       "id": "lodzka-premiera-na-filologu-kolo-naukowe-filmoznawcow-ul-zaprasza-na-seans-filmu-hedera-helix",
       "title": "Łódzka premiera na Filologu. Koło Naukowe Filmoznawców UŁ zaprasza na seans filmu „Hedera helix”",
       "excerpt": "24 listopada o godzinie 17:10 na auli A3 na Wydziale Filologicznym odbędzie się łódzka premiera filmu \"Hedera helix\" w reżyserii Adriana Michalskiego - studenta III roku filmoznawstwa i wiedzy o…",
@@ -27,16 +39,28 @@
       "firstSeen": "2026-11-17T14:38:32.355Z"
     },
     {
-      "id": "ambasador",
-      "title": "Zostań twarzą Wydziału Filologicznego UŁ! Wystartowała rekrutacja do Programu Ambasadorskiego",
-      "excerpt": "Chcesz zdobyć pierwsze doświadczenia w świecie PR-u, marketingu i organizacji eventów, a przy okazji pokazać innym, jak się u nas studiuje? Poszukujemy kreatywnych osób, które dołączą do Programu…",
+      "id": "10-edycja-konferencji-z-zakresu-umiejetnosci-miekkich-kompas-x-dekada-na-wlasciwym-szlaku",
+      "title": "10 edycja Konferencji z zakresu umiejętności miękkich \"Kompas X - Dekada na właściwym szlaku\"",
+      "excerpt": "SKN Progress zaprasza na jubileuszową 10 edycję Konferencji z zakresu umiejętności miękkich \"Kompas X - Dekada na właściwym szlaku\", która odbędzie się w dniach 24 i 25 listopada w sali C140. Wstęp…",
       "date": "2026-11-23",
-      "category": "Wydział Filologiczny",
-      "url": "https://www.filolog.uni.lodz.pl/ambasador",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/10-edycja-konferencji-z-zakresu-umiejetnosci-miekkich-kompas-x-dekada-na-wlasciwym-szlaku",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-23T16:08:46.545Z"
+    },
+    {
+      "id": "polska-na-kozetce-porozmawiajmy-o-wyzwaniach-mlodych-doroslych",
+      "title": "Polska na kozetce. Porozmawiajmy o wyzwaniach młodych dorosłych",
+      "excerpt": "Jak młode pokolenie odnajduje swoje miejsce we współczesnym społeczeństwie? Z jakimi wyzwaniami mierzą się młodzi dorośli i jaką rolę odgrywają w życiu wspólnoty? O tych zagadnieniach będzie można…",
+      "date": "2026-11-23",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/polska-na-kozetce-porozmawiajmy-o-wyzwaniach-mlodych-doroslych",
       "faculties": [
         "filolog"
       ],
-      "firstSeen": "2026-11-17T14:38:32.355Z"
+      "firstSeen": "2026-11-23T16:08:46.545Z"
     },
     {
       "id": "ii-miejsce-wydzialu-ekonomiczno-socjologicznego-ul-w-konkursie-wydzial-przyjazny-dla-kazdego",
@@ -49,6 +73,42 @@
         "eksoc"
       ],
       "firstSeen": "2026-11-20T14:08:16.405Z"
+    },
+    {
+      "id": "rozwijaj-swoje-kompetencje-zapisz-sie-na-szkolenia-cyfrowe-w-ramach-projektu-aktywni",
+      "title": "Rozwijaj swoje kompetencje – zapisz się na szkolenia cyfrowe w ramach projektu „Aktywni”!",
+      "excerpt": "Zapraszamy do udziału w szkoleniach poświęconych wykorzystaniu sztucznej inteligencji, analizie danych, programowaniu w Pythonie oraz narzędziom wspierającym pracę dydaktyczną i naukową. Szkolenia…",
+      "date": "2026-11-20",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/rozwijaj-swoje-kompetencje-zapisz-sie-na-szkolenia-cyfrowe-w-ramach-projektu-aktywni",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-23T16:08:46.545Z"
+    },
+    {
+      "id": "unic-open-courses-studiuj-online-na-university-of-deusto-w-hiszpanii",
+      "title": "UNIC Open Courses – studiuj online na University of Deusto w Hiszpanii",
+      "excerpt": "Zdobądź międzynarodowe doświadczenie bez wyjeżdżania z Polski! Zapisz się na kursy online University of Deusto! Międzynarodowe doświadczenie akademickie nie musi oznaczać wyjazdu za granicę. Osoby…",
+      "date": "2026-11-20",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/unic-open-courses-studiuj-online-na-university-of-deusto-w-hiszpanii",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-23T16:08:46.545Z"
+    },
+    {
+      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "title": "10 lat spotkań, które zostają z nami na dłużej: ruszyła kolejna edycja „Gościa na Gwiazdkę”",
+      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
+      "date": "2026-11-19",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-23T16:08:46.545Z"
     },
     {
       "id": "agencja-wywiadu-na-wydziale-filologicznym-ul-studenci-poznali-mozliwosci-pracy-w-sluzbach-specjalnych",
