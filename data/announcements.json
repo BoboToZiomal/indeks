@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T16:08:46.564Z",
+  "updatedAt": "2026-11-24T15:58:32.901Z",
   "items": [
     {
       "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
@@ -15,6 +15,18 @@
       "firstSeen": "2026-11-18T14:14:32.515Z"
     },
     {
+      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "title": "10 lat spotkań, które zostają z nami na dłużej: ruszyła kolejna edycja „Gościa na Gwiazdkę”",
+      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
+      "date": "2026-11-24",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-23T16:08:46.545Z"
+    },
+    {
       "id": "ambasador",
       "title": "Zostań twarzą Wydziału Filologicznego UŁ! Wystartowała rekrutacja do Programu Ambasadorskiego",
       "excerpt": "Chcesz zdobyć pierwsze doświadczenia w świecie PR-u, marketingu i organizacji eventów, a przy okazji pokazać innym, jak się u nas studiuje? Poszukujemy kreatywnych osób, które dołączą do Programu…",
@@ -23,6 +35,18 @@
       "url": "https://www.filolog.uni.lodz.pl/ambasador",
       "faculties": [
         "filolog"
+      ],
+      "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "level-up-kompetencyjny-upgrade-dla-studentow-ek-soc-4-dniowe-szkolenia-dofinansowane-ze-srodkow-efs-plus-128-i-9-grudnia-2026",
+      "title": "LEVEL UP! Kompetencyjny Upgrade dla studentów Ek-Soc - 4-dniowe szkolenia dofinansowane ze środków EFS Plus - 1,2,8 i 9 grudnia 2026",
+      "excerpt": "Co zyskasz dzięki udziałowi? Asertywność na co dzień – nauczysz się jasno komunikować swoje potrzeby, z szacunkiem stawiać granice w pracy, na uczelni lub w życiu codziennym bez poczucia…",
+      "date": "2026-11-24",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/level-up-kompetencyjny-upgrade-dla-studentow-ek-soc-4-dniowe-szkolenia-dofinansowane-ze-srodkow-efs-plus-128-i-9-grudnia-2026",
+      "faculties": [
+        "eksoc"
       ],
       "firstSeen": "2026-11-17T14:38:32.355Z"
     },
@@ -99,18 +123,6 @@
       "firstSeen": "2026-11-23T16:08:46.545Z"
     },
     {
-      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
-      "title": "10 lat spotkań, które zostają z nami na dłużej: ruszyła kolejna edycja „Gościa na Gwiazdkę”",
-      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
-      "date": "2026-11-19",
-      "category": "Uniwersytet",
-      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
-      "faculties": [
-        "filolog"
-      ],
-      "firstSeen": "2026-11-23T16:08:46.545Z"
-    },
-    {
       "id": "agencja-wywiadu-na-wydziale-filologicznym-ul-studenci-poznali-mozliwosci-pracy-w-sluzbach-specjalnych",
       "title": "Agencja Wywiadu na Wydziale Filologicznym UŁ. Studenci poznali możliwości pracy w służbach specjalnych",
       "excerpt": "19 listopada w sali 27 Wydziału Filologicznego Uniwersytetu Łódzkiego odbyło się spotkanie z przedstawicielami Agencji Wywiadu. Trwająca blisko 2 godziny dyskusja przyciągnęła studentów…",
@@ -170,18 +182,6 @@
         "filolog"
       ],
       "firstSeen": "2026-11-06T09:06:41.435Z"
-    },
-    {
-      "id": "level-up-kompetencyjny-upgrade-dla-studentow-ek-soc-4-dniowe-szkolenia-dofinansowane-ze-srodkow-efs-plus-128-i-9-grudnia-2026",
-      "title": "LEVEL UP! Kompetencyjny Upgrade dla studentów Ek-Soc - 4-dniowe szkolenia dofinansowane ze środków EFS Plus - 1,2,8 i 9 grudnia 2026",
-      "excerpt": "Co zyskasz dzięki udziałowi? Asertywność na co dzień – nauczysz się jasno komunikować swoje potrzeby, z szacunkiem stawiać granice w pracy, na uczelni lub w życiu codziennym bez poczucia…",
-      "date": "2026-11-17",
-      "category": "Wydział Ekonomiczno-Socjologiczny",
-      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/level-up-kompetencyjny-upgrade-dla-studentow-ek-soc-4-dniowe-szkolenia-dofinansowane-ze-srodkow-efs-plus-128-i-9-grudnia-2026",
-      "faculties": [
-        "eksoc"
-      ],
-      "firstSeen": "2026-11-17T14:38:32.355Z"
     },
     {
       "id": "mbank-zaprasza-studentow-i-studentki-do-sztabu-wosp",
