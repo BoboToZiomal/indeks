@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T15:58:32.901Z",
+  "updatedAt": "2026-11-25T15:46:07.901Z",
   "items": [
     {
       "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
@@ -13,6 +13,18 @@
         "filolog"
       ],
       "firstSeen": "2026-11-18T14:14:32.515Z"
+    },
+    {
+      "id": "warsztaty-z-narzekania-jak-narzekac-zeby-bylo-lzej-niedziela-29-listopada-2026",
+      "title": "Jak narzekać, żeby było lżej? Zapraszamy na warsztaty 29 listopada 2026 (niedziela)",
+      "excerpt": "Warsztaty o tym, jak narzekać mądrze, żeby odczuć ulgę, a nie dokładać sobie stresu. Sprawdzimy po co nam narzekanie i co się za nim kryje. Będzie refleksyjnie, w ruchu i z humorem, a czasem też z…",
+      "date": "2026-11-25",
+      "category": "Uniwersytet",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/warsztaty-z-narzekania-jak-narzekac-zeby-bylo-lzej-niedziela-29-listopada-2026",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-25T15:46:07.687Z"
     },
     {
       "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
@@ -61,6 +73,30 @@
         "filolog"
       ],
       "firstSeen": "2026-11-17T14:38:32.355Z"
+    },
+    {
+      "id": "nauka-i-sport-lubimy-takie-polaczenia-rusza-nabor-do-narodowej-reprezentacji-akademickiej-vii-sprawdz-szczegoly",
+      "title": "Nauka i sport? Lubimy takie połączenia! Rusza nabór do Narodowej Reprezentacji Akademickiej VII – sprawdź szczegóły",
+      "excerpt": "Na co dzień łączysz naukę z treningami i nie chcesz rezygnować z żadnej z tych rzeczy? W takim razie program Narodowa Reprezentacja Akademicka VII jest właśnie dla Ciebie! Nie musisz z niczego…",
+      "date": "2026-11-24",
+      "category": "Uniwersytet",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/nauka-i-sport-lubimy-takie-polaczenia-rusza-nabor-do-narodowej-reprezentacji-akademickiej-vii-sprawdz-szczegoly",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-25T15:46:07.687Z"
+    },
+    {
+      "id": "xix-wiek-w-najlepszym-stylu-kolo-naukowe-pasjonatow-literatury-i-sztuki-xix-wieku-nagrodzone-na-targach-scienceup",
+      "title": "XIX wiek w najlepszym stylu! Koło Naukowe Pasjonatów Literatury i Sztuki XIX wieku nagrodzone na Targach ScienceUp",
+      "excerpt": "Literackie domino, zabytkowe książki, stroje z epoki, a to wszystko w romantyczno-gotyckiej scenografii - tak Koło Naukowe Pasjonatów Literatury i Sztuki XIX wieku z Wydziału Filologicznego…",
+      "date": "2026-11-24",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/xix-wiek-w-najlepszym-stylu-kolo-naukowe-pasjonatow-literatury-i-sztuki-xix-wieku-nagrodzone-na-targach-scienceup",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-25T15:46:07.687Z"
     },
     {
       "id": "10-edycja-konferencji-z-zakresu-umiejetnosci-miekkich-kompas-x-dekada-na-wlasciwym-szlaku",
@@ -167,6 +203,7 @@
       "category": "Uniwersytet",
       "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/studenci-wspoltworza-przyszlosc-unic-spotkanie-student-board-w-zagrzebiu",
       "faculties": [
+        "eksoc",
         "filolog"
       ],
       "firstSeen": "2026-11-19T14:30:19.343Z"
