@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-25T15:46:07.901Z",
+  "updatedAt": "2026-11-26T15:26:56.367Z",
   "items": [
     {
       "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
@@ -15,6 +15,54 @@
       "firstSeen": "2026-11-18T14:14:32.515Z"
     },
     {
+      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "title": "10 lat spotkań, które zostają z nami na dłużej: ruszyła kolejna edycja „Gościa na Gwiazdkę”",
+      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
+      "date": "2026-11-26",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-23T16:08:46.545Z"
+    },
+    {
+      "id": "mamy-wyniki-naborow-zespolow-studenckich-do-sciencehub-unilodz-nauka-dla-dobrego-zycia",
+      "title": "Mamy wyniki naborów zespołów studenckich do ScienceHub UniLodz „Nauka dla Dobrego Życia”!",
+      "excerpt": "Komisja Oceniająca wybrała aż 7 zespołów do realizacji projektów badawczych w odpowiedzi na wyzwania w tegorocznym naborze Science Hub „Nauka dla Dobrego Życia”. Ogromnie gratulujemy zakwalifikowanym!…",
+      "date": "2026-11-26",
+      "category": "Wydział Ekonomiczno-Socjologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/mamy-wyniki-naborow-zespolow-studenckich-do-sciencehub-unilodz-nauka-dla-dobrego-zycia",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-26T15:26:56.215Z"
+    },
+    {
+      "id": "ostatni-dzwonek-na-studencka-przygode-z-programem-most",
+      "title": "Ostatni dzwonek na studencką przygodę z programem MOST!",
+      "excerpt": "Chcesz sprawdzić, jak wygląda studiowanie na innej polskiej uczelni, zdobyć nowe doświadczenia i poznać inne środowisko akademickie? Nie przegap ostatniej szansy na wyjazd w ramach programu MOST!…",
+      "date": "2026-11-25",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/ostatni-dzwonek-na-studencka-przygode-z-programem-most",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-26T15:26:56.215Z"
+    },
+    {
+      "id": "swiatowy-dzien-aids-z-sanepidem-na-wydziale-filologicznym",
+      "title": "Światowy Dzień AIDS z sanepidem na Wydziale Filologicznym",
+      "excerpt": "1 grudnia 2026 r. w godzinach 9:00-12:00 na Wydziale Filologicznym Uniwersytetu Łódzkiego dostępne będzie stoisko edukacyjne organizowane przez Oddział Promocji Zdrowia i Komunikacji Społecznej…",
+      "date": "2026-11-25",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/swiatowy-dzien-aids-z-sanepidem-na-wydziale-filologicznym",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-26T15:26:56.215Z"
+    },
+    {
       "id": "warsztaty-z-narzekania-jak-narzekac-zeby-bylo-lzej-niedziela-29-listopada-2026",
       "title": "Jak narzekać, żeby było lżej? Zapraszamy na warsztaty 29 listopada 2026 (niedziela)",
       "excerpt": "Warsztaty o tym, jak narzekać mądrze, żeby odczuć ulgę, a nie dokładać sobie stresu. Sprawdzimy po co nam narzekanie i co się za nim kryje. Będzie refleksyjnie, w ruchu i z humorem, a czasem też z…",
@@ -25,18 +73,6 @@
         "eksoc"
       ],
       "firstSeen": "2026-11-25T15:46:07.687Z"
-    },
-    {
-      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
-      "title": "10 lat spotkań, które zostają z nami na dłużej: ruszyła kolejna edycja „Gościa na Gwiazdkę”",
-      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
-      "date": "2026-11-24",
-      "category": "Uniwersytet",
-      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
-      "faculties": [
-        "filolog"
-      ],
-      "firstSeen": "2026-11-23T16:08:46.545Z"
     },
     {
       "id": "ambasador",
