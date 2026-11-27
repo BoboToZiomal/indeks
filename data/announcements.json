@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-26T15:26:56.367Z",
+  "updatedAt": "2026-11-27T15:15:55.498Z",
   "items": [
+    {
+      "id": "andrzejki-na-wydziale-filologicznym",
+      "title": "Andrzejki na Wydziale Filologicznym!",
+      "excerpt": "Koło Naukowe Glottodydaktyków serdecznie zaprasza na andrzejki! Wydarzenie odbędzie się 2 grudnia (środa) na Wydziale Filologicznym w sali 0.02 o 17:30.",
+      "date": "2026-12-02",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/andrzejki-na-wydziale-filologicznym",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-27T15:15:55.485Z"
+    },
+    {
+      "id": "swiatowy-dzien-aids-na-wydziale-filologicznym",
+      "title": "Światowy Dzień AIDS na Wydziale Filologicznym",
+      "excerpt": "1 grudnia 2026 r. w godzinach 9:00-12:00 na Wydziale Filologicznym Uniwersytetu Łódzkiego dostępne będzie stoisko edukacyjne organizowane przez Oddział Promocji Zdrowia i Komunikacji Społecznej…",
+      "date": "2026-12-01",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/swiatowy-dzien-aids-na-wydziale-filologicznym",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-27T15:15:55.485Z"
+    },
+    {
+      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "title": "10 lat spotkań, które zostają z nami na dłużej: ruszyła kolejna edycja „Gościa na Gwiazdkę”",
+      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
+      "date": "2026-11-27",
+      "category": "Uniwersytet",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "faculties": [
+        "filolog"
+      ],
+      "firstSeen": "2026-11-23T16:08:46.545Z"
+    },
     {
       "id": "czy-szkolny-teatr-moze-osiagnac-poziom-profesjonalnej-sztuki-spektakl-i-spotkanie-z-teatrem-na-drabinie",
       "title": "Czy szkolny teatr może osiągnąć poziom profesjonalnej sztuki? Spektakl i spotkanie z Teatrem „Na drabinie”",
@@ -15,16 +51,28 @@
       "firstSeen": "2026-11-18T14:14:32.515Z"
     },
     {
-      "id": "10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
-      "title": "10 lat spotkań, które zostają z nami na dłużej: ruszyła kolejna edycja „Gościa na Gwiazdkę”",
-      "excerpt": "Jesteś częścią społeczności UniLodz? Wiesz, że święta to czas radości i otwartych serc? Zgłoś się! W tym roku już po raz dziesiąty zapraszamy wszystkich członków i członkinie naszej społeczności do…",
-      "date": "2026-11-26",
+      "id": "nauka-i-sport-lubimy-takie-polaczenia-rusza-nabor-do-narodowej-reprezentacji-akademickiej-vii-sprawdz-szczegoly",
+      "title": "Nauka i sport? Lubimy takie połączenia! Rusza nabór do Narodowej Reprezentacji Akademickiej VII – sprawdź szczegóły",
+      "excerpt": "Na co dzień łączysz naukę z treningami i nie chcesz rezygnować z żadnej z tych rzeczy? W takim razie program Narodowa Reprezentacja Akademicka VII jest właśnie dla Ciebie! Nie musisz z niczego…",
+      "date": "2026-11-27",
       "category": "Uniwersytet",
-      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/10-lat-spotkan-ktore-zostaja-z-nami-na-dluzej-ruszyla-kolejna-edycja-goscia-na-gwiazdke",
+      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/nauka-i-sport-lubimy-takie-polaczenia-rusza-nabor-do-narodowej-reprezentacji-akademickiej-vii-sprawdz-szczegoly",
+      "faculties": [
+        "eksoc"
+      ],
+      "firstSeen": "2026-11-25T15:46:07.687Z"
+    },
+    {
+      "id": "xxviii-spotkanie-specjalistow-dawnych-literatur-romanskich",
+      "title": "„Wzrok i spojrzenie” skierowane na literaturę. XXVIII Spotkanie Specjalistów Dawnych Literatur Romańskich",
+      "excerpt": "Na Uniwersytecie Warszawskim w dniach 18-20 listopada odbyło się XXVIII Spotkanie Specjalistów Dawnych Literatur Romańskich, pt. „Wzrok i spojrzenie” – ogólnopolska konferencja naukowa, która od lat…",
+      "date": "2026-11-27",
+      "category": "Wydział Filologiczny",
+      "url": "https://www.filolog.uni.lodz.pl/strefa-studenta/aktualnosci/szczegoly/xxviii-spotkanie-specjalistow-dawnych-literatur-romanskich",
       "faculties": [
         "filolog"
       ],
-      "firstSeen": "2026-11-23T16:08:46.545Z"
+      "firstSeen": "2026-11-27T15:15:55.485Z"
     },
     {
       "id": "mamy-wyniki-naborow-zespolow-studenckich-do-sciencehub-unilodz-nauka-dla-dobrego-zycia",
@@ -109,18 +157,6 @@
         "filolog"
       ],
       "firstSeen": "2026-11-17T14:38:32.355Z"
-    },
-    {
-      "id": "nauka-i-sport-lubimy-takie-polaczenia-rusza-nabor-do-narodowej-reprezentacji-akademickiej-vii-sprawdz-szczegoly",
-      "title": "Nauka i sport? Lubimy takie połączenia! Rusza nabór do Narodowej Reprezentacji Akademickiej VII – sprawdź szczegóły",
-      "excerpt": "Na co dzień łączysz naukę z treningami i nie chcesz rezygnować z żadnej z tych rzeczy? W takim razie program Narodowa Reprezentacja Akademicka VII jest właśnie dla Ciebie! Nie musisz z niczego…",
-      "date": "2026-11-24",
-      "category": "Uniwersytet",
-      "url": "https://www.eksoc.uni.lodz.pl/aktualnosci/szczegoly/nauka-i-sport-lubimy-takie-polaczenia-rusza-nabor-do-narodowej-reprezentacji-akademickiej-vii-sprawdz-szczegoly",
-      "faculties": [
-        "eksoc"
-      ],
-      "firstSeen": "2026-11-25T15:46:07.687Z"
     },
     {
       "id": "xix-wiek-w-najlepszym-stylu-kolo-naukowe-pasjonatow-literatury-i-sztuki-xix-wieku-nagrodzone-na-targach-scienceup",
